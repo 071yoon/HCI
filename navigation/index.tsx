@@ -24,6 +24,8 @@ import PlaceVector from '../assets/images/PlaceVector.png';
 import ProfileVector from '../assets/images/ProfileVector.png';
 import SearchVector from '../assets/images/SearchVector.png';
 import RecordVector from '../assets/images/RecordVector.png';
+import MainTabOne from '../screens/MainTabOne';
+import itemDetail from '../screens/itemDetail';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -46,6 +48,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="TabOneDetail" component={itemDetail} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
@@ -71,7 +74,7 @@ function BottomTabNavigator() {
       }}>
       <BottomTab.Screen
         name="TabOne"
-        component={TabOneScreen}
+        component={MainTabOne}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
           title: '홈',
           tabBarIcon: ({ focused }) => {

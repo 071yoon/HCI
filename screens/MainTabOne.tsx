@@ -5,33 +5,40 @@ import threeBar from '../assets/images/threeBar.png'
 import Alarm from '../assets/images/Alarm.png'
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import onionSet from '../assets/images/onion-set.png'
+import onionSet from '../assets/images/onion-set.png';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
+import { TouchableOpacity } from 'react-native';
+import itemDetail from './itemDetail';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+
+const Stack = createNativeStackNavigator();
+
+export default function TabOneScreen({ navigation }: any)  {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.topNav}>
+        <View style={styles.topNav}>
         <Image style={styles.bar} source={threeBar} />
         <Image style={styles.alarm} source={Alarm} />
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      </View>
-      <View style={styles.main}>
-        <View style={styles.boxContainer}>
-          <View style={styles.count}>
-            <Text style={styles.countText}>2 / 3</Text>
-          </View>
-          <Image style={styles.boxImage} source={onionSet}/>
-          <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-          <Text style={styles.mainText}>[양파] 필요하신분!!</Text>
-          <Text style={styles.subText}>01:23:37</Text>
         </View>
+        <View style={styles.main}>
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
+            <View style={styles.count}>
+            <Text style={styles.countText}>2 / 3</Text>
+            </View>
+            <Image style={styles.boxImage} source={onionSet}/>
+            <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+            <Text style={styles.mainText}>[양파] 필요하신분!!</Text>
+            <Text style={styles.subText}>01:23:37</Text>
+        </TouchableOpacity>
         <View style={styles.boxContainer}><Text>B2</Text></View>
         <View style={styles.boxContainer}><Text>B3</Text></View>
         <View style={styles.boxContainer}><Text>B4</Text></View>
         <View style={styles.boxContainer}><Text>B5</Text></View>
         <View style={styles.boxContainer}><Text>B6</Text></View>
-      </View>
+        </View>
     </ScrollView>
   );
 }
@@ -104,12 +111,12 @@ const styles = StyleSheet.create({
   bar: {
     position: 'absolute',
     marginLeft: 20,
-    marginTop: 10,
+    marginTop: 15,
   },
   alarm: {
     position: 'absolute',
     marginLeft: 340,
-    marginTop: 5,
+    marginTop: 10,
   },
   separator: {
     marginVertical: 50,
