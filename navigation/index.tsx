@@ -30,6 +30,7 @@ import SearchScreen from '../screens/SearchScreen';
 import itemDetail from '../screens/itemDetail';
 import RecordScreen from '../screens/RecordScreen';
 import Chatting from '../screens/Chatting';
+import Post from '../screens/Post';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -99,10 +100,10 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabThree"
-        component={TabTwoScreen}
+        component={Post}
         options={{
           headerShown: false,
-          title: '내 근처',
+          title: '글 작성하기',
           tabBarIcon: ({ focused }) => {
             return(<Image source={PlaceVector} />)}
         }}
