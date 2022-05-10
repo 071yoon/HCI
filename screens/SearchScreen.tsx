@@ -1,9 +1,12 @@
-import { StyleSheet, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, TextInput, ScrollView, ImageBackground } from 'react-native';
 import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-
+import grapeSet from '../assets/images/grape.jpg';
+import onionSet from '../assets/images/onion.jpg';
+import appleSet from '../assets/images/apple.jpg';
+import pepperSet from '../assets/images/pepper.jpg';
 export default function SearchScreen() {
   const [inputs, setInputs] = React.useState('');
   return (
@@ -28,13 +31,24 @@ export default function SearchScreen() {
         <View style={styles.recentBubble}>
         <ScrollView horizontal={true} > 
           <View style={styles.recommendOne}>
+            <ImageBackground source={grapeSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>포도</Text>
-          </View>
+            </ImageBackground>
+          </View>    
           <View style={styles.recommendOne}>
+            <ImageBackground source={onionSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>양파</Text>
+            </ImageBackground>
           </View>
           <View style={styles.recommendOne}>
+            <ImageBackground source={pepperSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>고춧가루</Text>
+            </ImageBackground>
+          </View>
+          <View style={styles.recommendOne}>
+            <ImageBackground source={appleSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
+            <Text style={styles.one}>사과</Text>
+            </ImageBackground>
           </View>
         </ScrollView>
         </View>
@@ -61,12 +75,21 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   one: {
-    fontSize: 20,
+    fontSize: 16,
+    color: 'white',
     top: 35,
+    borderRadius: 10,
+    padding: 2,
+    marginLeft: 30,
+    marginRight: 10,
+    width: 74,
+    height: 30,
+    backgroundColor: 'rgba(0,0,0,0.3)',
     textAlign: 'center',
   },
   recommendOne: {
-    marginLeft: 10,
+    marginLeft: 5,
+    marginRight: 10,
     height: 100,
     borderRadius: 15,
     width: 150,
