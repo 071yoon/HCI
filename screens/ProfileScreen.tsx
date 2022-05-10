@@ -11,6 +11,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
+import onionProfile from '../assets/images/onionProfile.png'
 
 export default function ProfileScreen() {
   return (
@@ -19,9 +20,11 @@ export default function ProfileScreen() {
         <Image style={styles.bar} source={threeBar} />
         <Image style={styles.alarm} source={Alarm} />
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-        </View>
-      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-
+      </View>
+      <View style = {styles.profile}>
+        <Image style={styles.profileImg} source={onionProfile} />
+        <Text>asdf</Text>
+      </View>
     </View>
   );
 }
@@ -107,4 +110,16 @@ const styles = StyleSheet.create({
     height: 1,
     width: '100%',
   },
+  profile: {
+    height:100,
+    backgroundColor:'red',
+    display:'flex',
+    flexDirection:'row'
+  },
+  profileImg: {
+    width: 100,
+    height: 100,
+    marginLeft: 20,
+    backgroundColor:'blue',
+},
 });
