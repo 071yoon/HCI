@@ -12,36 +12,20 @@ import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
 
-
-const Stack = createNativeStackNavigator();
-
-export default function TabOneScreen({ navigation }: any)  {
+export default function ProfileScreen() {
   return (
-    <ScrollView style={styles.container}>
-        <View style={styles.topNav}>
+    <View style={styles.container}>
+      <View style={styles.topNav}>
         <Image style={styles.bar} source={threeBar} />
         <Image style={styles.alarm} source={Alarm} />
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
         </View>
-        <View style={styles.main}>
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
-            <View style={styles.count}>
-            <Text style={styles.countText}>2 / 3</Text>
-            </View>
-            <Image style={styles.boxImage} source={onionSet}/>
-            <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.mainText}>[양파] 필요하신분!!</Text>
-            <Text style={styles.subText}>01:23:37</Text>
-        </TouchableOpacity>
-        <View style={styles.boxContainer}><Text>B2</Text></View>
-        <View style={styles.boxContainer}><Text>B3</Text></View>
-        <View style={styles.boxContainer}><Text>B4</Text></View>
-        <View style={styles.boxContainer}><Text>B5</Text></View>
-        <View style={styles.boxContainer}><Text>B6</Text></View>
-        </View>
-    </ScrollView>
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+
+    </View>
   );
 }
+
 const styles = StyleSheet.create({
   mainText: {
     fontWeight: 'bold',

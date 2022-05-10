@@ -17,6 +17,7 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import HomeVector from '../assets/images/HomeVector.png';
@@ -76,8 +77,10 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="TabOne"
         component={MainTabOne}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        options={
+          ({ navigation }: RootTabScreenProps<'TabOne'>) => ({
           title: '홈',
+          headerShown: false, 
           tabBarIcon: ({ focused }) => {
           return(<Image source={HomeVector} />)}
         })}
@@ -95,6 +98,7 @@ function BottomTabNavigator() {
         name="TabThree"
         component={TabTwoScreen}
         options={{
+          headerShown: false,
           title: '내 근처',
           tabBarIcon: ({ focused }) => {
             return(<Image source={PlaceVector} />)}
@@ -104,6 +108,7 @@ function BottomTabNavigator() {
         name="TabFour"
         component={TabTwoScreen}
         options={{
+          headerShown: false,
           title: '기록',
           tabBarIcon: ({ focused }) => {
             return(<Image source={RecordVector} />)}
@@ -111,8 +116,9 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabFive"
-        component={TabTwoScreen}
+        component={ProfileScreen}
         options={{
+          headerShown: false, 
           title: '내 정보',
           tabBarIcon: ({ focused }) => {
             return(<Image source={ProfileVector} />)}
