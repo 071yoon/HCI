@@ -5,7 +5,12 @@ import threeBar from '../assets/images/threeBar.png'
 import Alarm from '../assets/images/Alarm.png'
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import onionSet from '../assets/images/onion-set.png';
+import onionSet from '../assets/images/onion.jpg';
+import appleSet from '../assets/images/apple.jpg';
+import grapeSet from '../assets/images/grape.jpg';
+import hotDdokbokiSet from '../assets/images/hot.png';
+import paSet from '../assets/images/pa.jpg';
+import pepperSet from '../assets/images/pepper.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
@@ -39,7 +44,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <View style={styles.count}>
             <Text style={styles.countText}>1 / 2</Text>
             </View>
-            <Image style={styles.boxImage} source={onionSet}/>
+            <Image style={styles.boxImage} source={hotDdokbokiSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[엽떡] 같이 먹으실 분!!</Text>
             <Text style={styles.subText}>00:40:36</Text>
@@ -50,7 +55,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <View style={styles.count}>
             <Text style={styles.countText}>1 / 3</Text>
             </View>
-            <Image style={styles.boxImage} source={onionSet}/>
+            <Image style={styles.boxImage} source={grapeSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[포도] 먹고 싶어요</Text>
             <Text style={styles.subText}>20:50:34</Text>
@@ -60,7 +65,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <View style={styles.count}>
             <Text style={styles.countText}>2 / 4</Text>
             </View>
-            <Image style={styles.boxImage} source={onionSet}/>
+            <Image style={styles.boxImage} source={appleSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[사과] 같이 구매하실 분</Text>
             <Text style={styles.subText}>02:50:23</Text>         
@@ -70,17 +75,17 @@ export default function TabOneScreen({ navigation }: any)  {
             <View style={styles.count}>
             <Text style={styles.countText}>2 / 4</Text>
             </View>
-            <Image style={styles.boxImage} source={onionSet}/>
+            <Image style={styles.boxImage} source={pepperSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[고춧가루] 나눠요</Text>
             <Text style={styles.subText}>06:30:32</Text>         
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>    
             <View style={styles.count}>
             <Text style={styles.countText}>1 / 5</Text>
             </View>
-            <Image style={styles.boxImage} source={onionSet}/>
+            <Image style={styles.boxImage} source={paSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[대파] 같이 구매하실 분 구해요</Text>
             <Text style={styles.subText}>16:48:17</Text>
