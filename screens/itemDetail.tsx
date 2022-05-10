@@ -5,7 +5,7 @@ import threeBar from '../assets/images/threeBar.png'
 import Alarm from '../assets/images/Alarm.png'
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import onionSet from '../assets/images/onion-set.png';
+import onionSet from '../assets/images/onion.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
