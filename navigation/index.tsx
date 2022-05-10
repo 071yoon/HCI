@@ -27,6 +27,7 @@ import RecordVector from '../assets/images/RecordVector.png';
 import MainTabOne from '../screens/MainTabOne';
 import SearchScreen from '../screens/SearchScreen';
 import itemDetail from '../screens/itemDetail';
+import RecordScreen from '../screens/RecordScreen';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -102,7 +103,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabFour"
-        component={TabTwoScreen}
+        component={RecordScreen}
         options={{
           title: '기록',
           tabBarIcon: ({ focused }) => {
