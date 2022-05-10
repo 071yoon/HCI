@@ -6,7 +6,7 @@ import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import Daewha from '../components/daewha';
 import Gwansim from '../components/gwansim';
 
-export default function RecordScreen() {
+export default function RecordScreen({ navigation }: any) {
   const [toggle, setToggle] = React.useState(true);
   function toggleState() {
     setToggle(!toggle);

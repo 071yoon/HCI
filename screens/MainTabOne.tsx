@@ -13,8 +13,6 @@ import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
 
 
-const Stack = createNativeStackNavigator();
-
 export default function TabOneScreen({ navigation }: any)  {
   return (
     <ScrollView style={styles.container}>

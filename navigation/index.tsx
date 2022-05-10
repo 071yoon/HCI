@@ -28,6 +28,7 @@ import MainTabOne from '../screens/MainTabOne';
 import SearchScreen from '../screens/SearchScreen';
 import itemDetail from '../screens/itemDetail';
 import RecordScreen from '../screens/RecordScreen';
+import Chatting from '../screens/Chatting';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -51,6 +52,7 @@ function RootNavigator() {
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="TabOneDetail" component={itemDetail} />
+      <Stack.Screen name="Chat" component={Chatting} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
@@ -104,11 +106,11 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="TabFour"
         component={RecordScreen}
-        options={{
+        options={({ navigation }: RootTabScreenProps<'TabFour'>) => ({
           title: '기록',
           tabBarIcon: ({ focused }) => {
             return(<Image source={RecordVector} />)}
-        }}
+        })}
       />
       <BottomTab.Screen
         name="TabFive"

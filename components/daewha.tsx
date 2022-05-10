@@ -6,16 +6,16 @@ import { Text, View } from '../components/Themed';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import Onion from '../assets/images/onionProfile.png';
 
-export default function daewha(){
+export default function daewha({ navigation }: any){
     return(
       <>
         <View style={styles.container}>
-          <View style={styles.profile}>
+          <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('TabOneDetail')}>
             <Image style={styles.img} source={Onion} />
             <Text style={styles.title}>양파좋아</Text>
             <Text style={styles.message}>그럼 거기서 만나요!</Text>
             <View style={styles.separator} />
-          </View>
+          </TouchableOpacity>
           <View style={styles.profile}>
             <Image style={styles.img} source={Onion} />
             <View style={styles.separator} />
