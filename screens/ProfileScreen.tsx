@@ -12,6 +12,7 @@ import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
 import onionProfile from '../assets/images/onionProfile.png'
+import setting from '../assets/images/brightness_5.png'
 
 export default function ProfileScreen() {
   return (
@@ -23,13 +24,57 @@ export default function ProfileScreen() {
       </View>
       <View style = {styles.profile}>
         <Image style={styles.profileImg} source={onionProfile} />
-        <Text>asdf</Text>
+        <View style = {styles.profileText}>
+          <Text style = {styles.profileTitle}>양파좋아</Text>
+          <Text style = {styles.profileSubTitle}>서울 특별시 광진구</Text>
+          <TouchableOpacity 
+          onPress = {()=>{}}
+          style = {styles.profileEdit}>
+            <Text style = {styles.profileEditText}>프로필 설정</Text>
+            <Image style = {styles.profileEditImage} source={setting} />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  profileText : {
+
+    width: 230,
+    marginLeft: 20,
+  },
+  profileEdit : {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop : 6,
+    width : '100%',
+    height : 24,
+    borderRadius: 5,
+    justifyContent: 'center',
+    borderStyle : 'solid',
+    borderColor : "#afafaf",
+    borderWidth : 1.2,
+  },
+  profileEditText : {
+    fontWeight: 'bold',
+    color : "#afafaf"
+  }, 
+  profileEditImage : {
+    marginLeft : 4
+  }, 
+  profileSubTitle : {
+    fontSize : 15,
+    marginTop : 4,
+  },
+  profileTitle : {
+    width: '100%',
+    fontWeight: 'bold',
+    marginTop: 8,
+    fontSize: 18,
+  },
   mainText: {
     fontWeight: 'bold',
   },
@@ -63,7 +108,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
     width: 150,
     height: 200,
-    backgroundColor: 'white',
+
     borderRadius: 30,
     overflow: 'hidden',
     borderStyle: 'solid',
@@ -112,14 +157,15 @@ const styles = StyleSheet.create({
   },
   profile: {
     height:100,
-    backgroundColor:'red',
     display:'flex',
-    flexDirection:'row'
+    flexDirection:'row',
+    alignItems : 'center',
+    justifyContent : 'center',
+
   },
   profileImg: {
-    width: 100,
-    height: 100,
-    marginLeft: 20,
-    backgroundColor:'blue',
+    width: 86,
+    height: 86,
+    marginTop : 10
 },
 });
