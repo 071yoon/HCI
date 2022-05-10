@@ -25,6 +25,7 @@ import ProfileVector from '../assets/images/ProfileVector.png';
 import SearchVector from '../assets/images/SearchVector.png';
 import RecordVector from '../assets/images/RecordVector.png';
 import MainTabOne from '../screens/MainTabOne';
+import SearchScreen from '../screens/SearchScreen';
 import itemDetail from '../screens/itemDetail';
 
 
@@ -83,7 +84,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabTwo"
-        component={TabTwoScreen}
+        component={SearchScreen}
         options={{
           title: '검색',
           tabBarIcon: ({ focused }) => {
