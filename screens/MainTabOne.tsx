@@ -89,7 +89,6 @@ export default function TabOneScreen({ navigation }: any)  {
     </ScrollView>
   );
 }
-
 const styles = StyleSheet.create({
   mainText: {
     fontWeight: 'bold',
@@ -151,6 +150,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topNav: {
+    marginTop: 50,
     height: 60,
     position: 'relative',
     alignContent: 'center',
