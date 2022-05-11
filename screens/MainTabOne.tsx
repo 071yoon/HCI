@@ -18,6 +18,8 @@ import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
 
 
+const Stack = createNativeStackNavigator();
+
 export default function TabOneScreen({ navigation }: any)  {
   return (
     <ScrollView style={styles.container}>
@@ -33,7 +35,7 @@ export default function TabOneScreen({ navigation }: any)  {
             </View>
             <Image style={styles.boxImage} source={onionSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.mainText}>[양파] 필요하신분!!</Text>
+            <Text style={styles.mainText}>[양파] 필요하신 분!!</Text>
             <Text style={styles.subText}>01:23:37</Text>
         </TouchableOpacity>
 
@@ -44,7 +46,7 @@ export default function TabOneScreen({ navigation }: any)  {
             </View>
             <Image style={styles.boxImage} source={hotDdokbokiSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.mainText}>[엽떡] 같이 먹으실 분!!</Text>
+            <Text style={styles.mainText}>[엽떡] 같이 먹을 분 찾음</Text>
             <Text style={styles.subText}>00:40:36</Text>
         </TouchableOpacity>
 
@@ -85,13 +87,14 @@ export default function TabOneScreen({ navigation }: any)  {
             </View>
             <Image style={styles.boxImage} source={paSet}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.mainText}>[대파] 같이 구매하실 분 구해요</Text>
+            <Text style={styles.mainText}>[대파] 대량 구매해요</Text>
             <Text style={styles.subText}>16:48:17</Text>
          </TouchableOpacity>
          </View>
     </ScrollView>
   );
 }
+
 const styles = StyleSheet.create({
   mainText: {
     fontWeight: 'bold',
@@ -153,7 +156,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topNav: {
-    marginTop: 50,
     height: 60,
     position: 'relative',
     alignContent: 'center',

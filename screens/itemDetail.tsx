@@ -26,8 +26,8 @@ export default function ItemDetails({ navigation }: any) {
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 
         </View>
         <Text style={styles.mainArticle}>양파 같이 구매하실 분 계신가요?</Text>
-        <Text style={styles.mainArticle}>카레를 만들 예정인데 양파 한 망은 너무 많은 것 같아서 고민이네요ㅠㅠ</Text>
-        <Text style={styles.mainArticle}>오늘 저녁으로 먹을 예정이라 1시간 반동안만 구할게요!</Text>
+        <Text style={styles.mainArticle}>카레 만들건데 양파 한 망은 너무 많은 것 같아서 고민이네요ㅠㅠ</Text>
+        <Text style={styles.mainArticle}>오늘 저녁으로 먹을 예정이라 1시간 반 동안만 구할게요!</Text>
         <View style={styles.down}>
             <Image style={styles.heart} source={Heart} />
             <Text style={styles.together}>같이 구매하시겠어요?</Text>
