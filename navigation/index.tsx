@@ -53,8 +53,8 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="TabOneDetail" component={itemDetail} />
       <Stack.Screen name="Chat" component={Chatting} />
+      <Stack.Screen name="TabOneDetail" component={itemDetail} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

@@ -5,6 +5,7 @@ import { Text, View } from '../components/Themed';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import Daewha from '../components/daewha';
 import Gwansim from '../components/gwansim';
+import { useLinkProps } from '@react-navigation/native';
 
 export default function RecordScreen({ navigation }: any) {
   const [toggle, setToggle] = React.useState(true);
@@ -20,6 +21,7 @@ export default function RecordScreen({ navigation }: any) {
       </TouchableOpacity>
       {toggle? <Gwansim /> : <Daewha /> }
     </View>
+    
   );
 }
 

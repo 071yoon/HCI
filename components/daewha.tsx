@@ -1,4 +1,5 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Image } from 'react-native';
@@ -6,7 +7,8 @@ import { Text, View } from '../components/Themed';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import Onion from '../assets/images/onionProfile.png';
 
-export default function daewha({ navigation }: any){
+export default function daewha(){
+  const navigation = useNavigation();
     return(
       <>
         <View style={styles.container}>
