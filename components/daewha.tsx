@@ -12,7 +12,7 @@ export default function daewha(){
     return(
       <>
         <View style={styles.container}>
-          <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('TabOneDetail')}>
+          <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('Chat')}>
             <Image style={styles.img} source={Onion} />
             <Text style={styles.title}>양파좋아</Text>
             <Text style={styles.message}>그럼 거기서 만나요!</Text>

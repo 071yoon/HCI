@@ -1,4 +1,5 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Image } from 'react-native';
@@ -7,10 +8,11 @@ import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import Onion from '../assets/images/onionProfile.png';
 
 export default function gwansim(){
+  const navigation = useNavigation();
     return(
       <>
         <View style={styles.container}>
-          <View style={styles.profile}>
+          <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('TabOneDetail')}>
             <Image style={styles.img} source={Onion} />
             <Text style={styles.title}>양파좋아</Text>
             <Text style={styles.message}>[양파] 양파 필요하신분!!</Text>
@@ -18,7 +20,7 @@ export default function gwansim(){
               <Text style={styles.bubbleText}>2/3</Text>
             </View>
             <View style={styles.separator} />
-          </View>
+          </TouchableOpacity>
           <View style={styles.profile}>
             <Image style={styles.img} source={Onion} />
             <View style={styles.separator} />
