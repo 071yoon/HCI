@@ -5,6 +5,7 @@ import { Image } from 'react-native';
 import React from 'react';
 import { ScrollView } from 'react-native';
 import onionSet from '../assets/images/onion-set.png';
+import grapes from '../assets/images/grapes.png';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
@@ -18,15 +19,23 @@ export default function ProfileScreen() {
   const [cnt, setCnt] = React.useState('');
   const [title, setTitle] = React.useState('');
   const [info, setInfo] = React.useState('');
+  const [place, setPlace] = React.useState('');
+
 
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.photo}>
         <Text style={{fontSize:20}}>사진</Text>
         <ScrollView horizontal={true}>
           <View style={styles.recommendOne}>
-              <Text style={styles.one}>포도</Text>
+              <Image source={grapes} style={{width: "100%", height: "100%"}}></Image>
+            </View>
+            <View style={styles.recommendOne}>
+              <Text style={styles.one}>+</Text>
+            </View>
+            <View style={styles.recommendOne}>
+              <Text style={styles.one}>+</Text>
             </View>
             <View style={styles.recommendOne}>
               <Text style={styles.one}>+</Text>
@@ -38,7 +47,11 @@ export default function ProfileScreen() {
       </View>
       <View style={styles.location}>
         <Text style={{fontSize:20}}>위치</Text>
-        <Text style={styles.findLocation}>위치를 입력하세요</Text>
+        <TextInput
+        placeholder={'위치를 입력하세요'}
+        onChangeText={setPlace}
+        value={place}
+      />
       </View>
       <View style={styles.items}>
 
@@ -50,7 +63,7 @@ export default function ProfileScreen() {
       />
       <TextInput
         style={styles.cntInput}
-        placeholder={'인원'}
+        placeholder={'모집 인원'}
         onChangeText={setCnt}
         value={cnt}
       />
@@ -62,7 +75,7 @@ export default function ProfileScreen() {
       />
       <TextInput
         style={styles.info}
-        placeholder={'내용'}
+        placeholder={'내용을 입력해주세요'}
         onChangeText={setInfo}
         value={info}
       />
@@ -70,7 +83,7 @@ export default function ProfileScreen() {
       <View style={styles.submit}>
         <Text>게시하기</Text>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -78,7 +91,7 @@ const styles = StyleSheet.create({
   submit: {
     position: 'absolute',
     textAlign: 'center',
-    height: 30,
+    height: 10,
     width: 100,
     borderRadius: 30,
     backgroundColor: '#92DF45',
@@ -127,7 +140,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   items: {
-    marginTop: 10,
+    marginTop: 8,
     height: 450,
   },
   findLocation: {
@@ -138,18 +151,18 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   one: {
-    fontSize: 20,
-    top: 35,
+    fontSize: 40,
+    top: 20,
     textAlign: 'center',
+    color: 'white',
   },
   recommendOne: {
-    marginTop: 10,
+    marginTop: 15,
     marginBottom: 10,
-    marginLeft: 20,
+    marginLeft: 5,
     height: 100,
-    borderRadius: 15,
-    width: 150,
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    width: 100,
+    backgroundColor: 'rgba(0,0,0,0.1)',
   },
   photo: {
     marginBottom: 20,

@@ -35,13 +35,121 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         </View>
       </View>
+      <View style={styles.separator2} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <View style={styles.menu}>
+          <View style={styles.menuText}>
+            <Text style ={styles.middleFont}>내가 등록한 상품</Text>
+            <Text>더보기</Text>
+          </View>
+          <View style={styles.menuGroup}>
+            <View style={[styles.menuTab, styles.menuTabRightLine]}>
+              <Text>전체</Text>
+              <Text style={[styles.menuTabNum, styles.fontOrange]}>7</Text>
+            </View>
+            <View style={styles.menuTab}>
+              <Text>진행중</Text>
+              <Text style={styles.menuTabNum}>3</Text>
+            </View>
+            <View style={styles.menuTab}>
+              <Text>완료</Text>
+              <Text style={styles.menuTabNum}>2</Text>
+            </View>
+            <View style={styles.menuTab}>
+              <Text>실패</Text>
+              <Text style={styles.menuTabNum}>2</Text>
+            </View>
+          </View>
+        </View>
+      <View style={styles.menu}>
+        <View style={styles.menuText}>
+          <Text style ={styles.middleFont}>내가 참여한 상품</Text>
+          <Text>더보기</Text>
+        </View>
+          <View style={styles.menuGroup}>
+          <View style={[styles.menuTab, styles.menuTabRightLine]}>
+            <Text>전체</Text>
+            <Text style={[styles.menuTabNum, styles.fontGreen]}>5</Text>
+          </View>
+          <View style={styles.menuTab}>
+            <Text>진행중</Text>
+            <Text style={styles.menuTabNum}>0</Text>
+          </View>
+          <View style={styles.menuTab}>
+            <Text>완료</Text>
+            <Text style={styles.menuTabNum}>4</Text>
+          </View>
+          <View style={styles.menuTab}>
+            <Text>실패</Text>
+            <Text style={styles.menuTabNum}>1</Text>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  fontOrange: {
+    color : 'rgb(244,104,0)',
+  },
+  fontGreen: {
+    color : '#86CF3C',
+  },
+  middleFont : {
+    fontSize : 14,
+    fontWeight: 'bold',
+  },
+  menu : {
+    display:'flex',
+    marginHorizontal: 20,
+    marginBottom: 20,
+  },
+  menuText : {
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-between',
+    marginBottom:10,
+    marginHorizontal:2,
+  },
+  menuGroup : {
+    display:'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor : '#F3F3F3',
+    borderRadius: 10,
+  },
+  menuTab : {
+    display:'flex',
+    marginHorizontal : 10,
+    marginTop:8,
+    backgroundColor : '#F3F3F3',
+    height:50,
+    width:88,
+    alignItems :'center',
+    marginBottom:10,
+  },
+  menuTabRightLine:{
+    borderRightWidth:1.5,
+    borderRightColor:"#DEDEDE",
+    borderStyle : 'solid',
+  },
+  menuTabNum : {
+    marginTop:4,
+    fontWeight:'bold'
+  },
+  profile: {
+    height:100,
+    display:'flex',
+    flexDirection:'row',
+    alignItems : 'center',
+    justifyContent : 'center',
+  },
+  profileImg: {
+    width: 86,
+    height: 86,
+    marginTop : 10
+  },
   profileText : {
-
     width: 230,
     marginLeft: 20,
   },
@@ -66,8 +174,10 @@ const styles = StyleSheet.create({
     marginLeft : 4
   }, 
   profileSubTitle : {
-    fontSize : 15,
+    fontWeight:'bold',
+    fontSize : 14,
     marginTop : 4,
+    color : "#afafaf",
   },
   profileTitle : {
     width: '100%',
@@ -155,17 +265,9 @@ const styles = StyleSheet.create({
     height: 1,
     width: '100%',
   },
-  profile: {
-    height:100,
-    display:'flex',
-    flexDirection:'row',
-    alignItems : 'center',
-    justifyContent : 'center',
-
+  separator2: {
+    marginVertical: 20,
+    height: 1,
+    width: '100%',
   },
-  profileImg: {
-    width: 86,
-    height: 86,
-    marginTop : 10
-},
 });
