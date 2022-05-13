@@ -16,8 +16,9 @@ export default function RecordScreen({ navigation }: any) {
     <View style={styles.container}>
       <TouchableOpacity onPress={toggleState} style={styles.button}>
         {toggle? <View style={styles.toggledButton}/> : <View style={styles.untoggleButton} /> }
-        <Text style={styles.textsL}>대화목록</Text>
+        <Text style={styles.textsL}>대화 목록</Text>
         <Text style={styles.textsR}>관심 목록</Text>
+        
       </TouchableOpacity>
       {toggle? <Gwansim /> : <Daewha /> }
     </View>
@@ -30,14 +31,12 @@ const styles = StyleSheet.create({
   textsL: {
     position: 'absolute',
     fontSize: 18,
-    color: 'black',
     top: 5,
     left: 50,
   },
   textsR: {
     position: 'absolute',
     fontSize: 18,
-    color: 'black',
     top: 5,
     right: 50,
   },

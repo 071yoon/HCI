@@ -103,7 +103,7 @@ function BottomTabNavigator() {
         component={Post}
         options={{
           headerShown: false,
-          title: '글 작성하기',
+          title: '글 작성',
           tabBarIcon: ({ focused }) => {
             return(<Image source={PlaceVector} />)}
         }}
