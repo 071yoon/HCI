@@ -2,20 +2,13 @@ import React, {useState, useEffect} from 'react';
 import { Alert, StyleSheet, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import threeBar from '../assets/images/threeBar.png'
-import Alarm from '../assets/images/Alarm.png'
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import onionSet from '../assets/images/onion.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
-import onionProfile from '../assets/images/onionProfile.png'
-import plus from '../assets/images/plus.png'
-import send from '../assets/images/send.png'
 import { Button } from 'react-native';
-import Heart from '../assets/images/Heart.png';
 import {
   Pressable,
   Keyboard,
@@ -38,21 +31,21 @@ let newComment = {
           }
         ]
     }
-    const addComment = (input:any) => {
-        newComment.content = input;
-        let arrCopy = [...comment];
-        arrCopy.push(newComment);
-        setComment(arrCopy);
-      };
+    // const addComment = (input:any) => {
+    //     newComment.content = input;
+    //     let arrCopy = [...comment];
+    //     arrCopy.push(newComment);
+    //     setComment(arrCopy);
+    //   };
   return (
     <View style={styles.container}>
       <View style={styles.chat}>
         <View style={styles.you}>
-        <Image style={styles.profileImg} source={onionProfile} />
+        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
         <Text style={styles.chatBoxYou}>안녕하세요!</Text>
         </View>
         <View style={styles.you}>
-        <Image style={styles.profileImg} source={onionProfile} />
+        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
         <Text style={styles.chatBoxYou}>반갑습니다 ㅎㅎ</Text>
         </View>
         <View style={styles.me}>
@@ -63,14 +56,14 @@ let newComment = {
         </View>
       </View>
         <View style={styles.down}>
-          <Image style={styles.plus} source={plus} />
+          <Image style={styles.plus} source={require("../assets/images/plus.png")} />
           <TextInput
           style={styles.input}
           placeholder={'메시지를 입력하세요'}
           onChangeText={setInputs}
           value={inputs}
           />
-          <Image style={styles.plus} source={send} />
+          <Image style={styles.plus} source={require("../assets/images/send.png")} />
         </View>
     </View>
   );

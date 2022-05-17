@@ -3,10 +3,6 @@ import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import grapeSet from '../assets/images/grape.jpg';
-import onionSet from '../assets/images/onion.jpg';
-import appleSet from '../assets/images/apple.jpg';
-import pepperSet from '../assets/images/pepper.jpg';
 export default function SearchScreen() {
   const [inputs, setInputs] = React.useState('');
   return (
@@ -31,22 +27,22 @@ export default function SearchScreen() {
         <View style={styles.recentBubble}>
         <ScrollView horizontal={true} > 
           <View style={styles.recommendOne}>
-            <ImageBackground source={grapeSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
+            <ImageBackground source={require("../assets/images/grape.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>포도</Text>
             </ImageBackground>
           </View>    
           <View style={styles.recommendOne}>
-            <ImageBackground source={onionSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
+            <ImageBackground source={require("../assets/images/onion.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>양파</Text>
             </ImageBackground>
           </View>
           <View style={styles.recommendOne}>
-            <ImageBackground source={pepperSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
+            <ImageBackground source={require("../assets/images/pepper.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>고춧가루</Text>
             </ImageBackground>
           </View>
           <View style={styles.recommendOne}>
-            <ImageBackground source={appleSet} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
+            <ImageBackground source={require("../assets/images/apple.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>사과</Text>
             </ImageBackground>
           </View>

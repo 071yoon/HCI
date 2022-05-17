@@ -1,25 +1,20 @@
 import { StyleSheet } from "react-native";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
-import threeBar from "../assets/images/threeBar.png";
-import Alarm from "../assets/images/Alarm.png";
 import { Image } from "react-native";
 import { ScrollView } from "react-native";
-import onionSet from "../assets/images/onion-set.png";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { shouldUseActivityState } from "react-native-screens";
 import { TouchableOpacity } from "react-native";
 import itemDetail from "./itemDetail";
-import onionProfile from "../assets/images/onionProfile.png";
-import setting from "../assets/images/brightness_5.png";
 
 export default function ProfileScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.topNav}>
-        <Image style={styles.bar} source={threeBar} />
-        <Image style={styles.alarm} source={Alarm} />
+        <Image style={styles.bar} source={require("../assets/images/threeBar.png")} />
+        <Image style={styles.alarm} source={require("../assets/images/Alarm.png")} />
         <View
           style={styles.separator}
           lightColor="#eee"
@@ -27,13 +22,13 @@ export default function ProfileScreen() {
         />
       </View>
       <View style={styles.profile}>
-        <Image style={styles.profileImg} source={onionProfile} />
+        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
         <View style={styles.profileText}>
           <Text style={styles.profileTitle}>양파좋아</Text>
           <Text style={styles.profileSubTitle}>서울 특별시 광진구</Text>
           <TouchableOpacity onPress={() => {}} style={styles.profileEdit}>
             <Text style={styles.profileEditText}>프로필 설정</Text>
-            <Image style={styles.profileEditImage} source={setting} />
+            <Image style={styles.profileEditImage} source={require("../assets/images/brightness_5.png")} />
           </TouchableOpacity>
         </View>
       </View>

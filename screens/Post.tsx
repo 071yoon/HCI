@@ -4,14 +4,11 @@ import { RootTabScreenProps } from '../types';
 import { Image } from 'react-native';
 import React from 'react';
 import { ScrollView } from 'react-native';
-import onionSet from '../assets/images/onion-set.png';
-import grapes from '../assets/images/grapes.png';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
-import onionProfile from '../assets/images/onionProfile.png'
 import { TextInput } from 'react-native';
 
 export default function ProfileScreen() {
@@ -29,7 +26,7 @@ export default function ProfileScreen() {
         <Text style={{fontSize:20}}>사진</Text>
         <ScrollView horizontal={true}>
           <View style={styles.recommendOne}>
-              <Image source={grapes} style={{width: "100%", height: "100%"}}></Image>
+              <Image source={require("../assets/images/grapes.png")} style={{width: "100%", height: "100%"}}></Image>
             </View>
             <View style={styles.recommendOne}>
               <Text style={styles.one}>+</Text>

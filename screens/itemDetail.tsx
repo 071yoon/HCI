@@ -1,25 +1,20 @@
 import { Alert, StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import threeBar from '../assets/images/threeBar.png'
-import Alarm from '../assets/images/Alarm.png'
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import onionSet from '../assets/images/onion.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
-import onionProfile from '../assets/images/onionProfile.png'
 import { Button } from 'react-native';
-import Heart from '../assets/images/Heart.png';
 
 export default function ItemDetails({ navigation }: any) {
   return (
     <View style={styles.container}>
-        <Image style={styles.img} source={onionSet} />
+        <Image style={styles.img} source={require("../assets/images/onion.jpg")} />
         <View style={styles.profile}>
-            <Image style={styles.profileImg} source={onionProfile} />
+            <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
             <Text style={styles.profileName}>양파좋아</Text>
             <Text style={styles.profileTime}>1시간 전</Text>
             <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>
@@ -29,7 +24,7 @@ export default function ItemDetails({ navigation }: any) {
         <Text style={styles.mainArticle}>카레 만들건데 양파 한 망은 너무 많은 것 같아서 고민이네요ㅠㅠ</Text>
         <Text style={styles.mainArticle}>오늘 저녁으로 먹을 예정이라 1시간 반 동안만 구할게요!</Text>
         <View style={styles.down}>
-            <Image style={styles.heart} source={Heart} />
+            <Image style={styles.heart} source={require("../assets/images/Heart.png")} />
             <Text style={styles.together}>같이 구매하시겠어요?</Text>
             <View style={styles.button}>
                 <Text style={styles.ppl}>2 / 3</Text>
