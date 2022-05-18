@@ -1,14 +1,8 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Image } from 'react-native';
 import { Text, View } from '../components/Themed';
-import { withSafeAreaInsets } from 'react-native-safe-area-context';
-import Onion from '../assets/images/onionProfile.png';
-import prof1 from '../assets/images/prof1.png';
-import prof2 from '../assets/images/prof2.png';
-import prof3 from '../assets/images/prof3.png';
 
 export default function gwansim(){
   const navigation = useNavigation();
@@ -16,7 +10,7 @@ export default function gwansim(){
       <>
         <View style={styles.container}>
           <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('TabOneDetail')}>
-            <Image style={styles.img} source={Onion} />
+            <Image style={styles.img} source={require('../assets/images/onionProfile.png')} />
             <Text style={styles.title}>양파좋아</Text>
             <Text style={styles.message}>[양파] 양파 필요하신분!!</Text>
             <View style={styles.bubble}>
@@ -25,7 +19,7 @@ export default function gwansim(){
             <View style={styles.separator} />
           </TouchableOpacity>
           <View style={styles.profile}>
-            <Image style={styles.img} source={prof1} />
+            <Image style={styles.img} source={require('../assets/images/prof1.png')} />
             <Text style={styles.title}>이진</Text>
             <Text style={styles.message}>[양파] 같이 사요</Text>
             <View style={styles.bubble}>
@@ -34,7 +28,7 @@ export default function gwansim(){
             <View style={styles.separator} />
           </View>
           <View style={styles.profile}>
-            <Image style={styles.img} source={prof2} />
+            <Image style={styles.img} source={require('../assets/images/prof2.png')} />
             <Text style={styles.title}>희도</Text>
             <Text style={styles.message}>[엽기 떡볶이] 같이 드실 분~</Text>
             <View style={styles.bubble}>
@@ -43,7 +37,7 @@ export default function gwansim(){
             <View style={styles.separator} />
           </View>
           <View style={styles.profile}>
-            <Image style={styles.img} source={prof3} />
+            <Image style={styles.img} source={require('../assets/images/prof3.png')} />
             <Text style={styles.title}>유림</Text>
             <Text style={styles.message}>[사과] 공동구매 원해요</Text>
             <View style={styles.bubble}>

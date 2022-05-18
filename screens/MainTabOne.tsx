@@ -107,6 +107,9 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   boxContainer: {
+    // outline: none;
+    color: '#0070d2',
+    borderColor: '#dddbda',
     position: 'relative',
     marginTop: 4,
     marginBottom: 20,
@@ -118,7 +121,6 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     overflow: 'hidden',
     borderStyle: 'solid',
-    borderColor: 'gray',
     borderWidth: 1,
     display: 'flex',
     flexDirection: 'column',

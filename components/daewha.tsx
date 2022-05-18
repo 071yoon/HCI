@@ -5,11 +5,6 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Image } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
-import Onion from '../assets/images/onionProfile.png';
-import prof1 from '../assets/images/prof1.png';
-import prof2 from '../assets/images/prof2.png';
-import prof3 from '../assets/images/prof3.png';
-
 
 export default function daewha(){
   const navigation = useNavigation();
@@ -17,31 +12,17 @@ export default function daewha(){
       <>
         <View style={styles.container}>
           <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('Chat')}>
-            <Image style={styles.img} source={Onion} />
+            <Image style={styles.img} source={require('../assets/images/onionProfile.png')} />
             <Text style={styles.title}>양파좋아</Text>
             <Text style={styles.message}>그럼 거기서 만나요!</Text>
             <View style={styles.separator} />
           </TouchableOpacity>
           <View style={styles.profile}>
-            <Image style={styles.img} source={prof1} />
-            <Text style={styles.title}>이진</Text>
-            <Text style={styles.message}>양파 몇개나 필요하세요?</Text>
-            <View style={styles.separator} />
-          </View>
-          <View style={styles.profile}>
-            <Image style={styles.img} source={prof2} />
+            <Image style={styles.img} source={require('../assets/images/prof2.png')} />
             <Text style={styles.title}>희도</Text>
             <Text style={styles.message}>엽떡 매운맛으로 시키겠습니다.</Text>
             <View style={styles.separator} />
           </View>
-          <View style={styles.profile}>
-            <Image style={styles.img} source={prof3} />
-            <Text style={styles.title}>유림</Text>
-            <Text style={styles.message}>저번에 사과 너무 맛있더라고요.</Text>
-            <View style={styles.separator} />
-          </View>
-
-          
         </View>
       </>
     )
