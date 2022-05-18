@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Alert, StyleSheet,TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { Image } from 'react-native';
@@ -7,7 +7,6 @@ import { ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
-import { TouchableOpacity } from 'react-native';
 import itemDetail from './itemDetail';
 import { TextInput } from 'react-native';
 
@@ -17,8 +16,6 @@ export default function ProfileScreen() {
   const [title, setTitle] = React.useState('');
   const [info, setInfo] = React.useState('');
   const [place, setPlace] = React.useState('');
-
-
 
   return (
     <ScrollView style={styles.container}>
@@ -77,9 +74,9 @@ export default function ProfileScreen() {
         value={info}
       />
       </View>
-      <View style={styles.submit}>
+      <TouchableOpacity onPress={() => Alert.alert('게시완료되었습니다')} style={styles.submit}>
         <Text style={styles.center}>게시하기</Text>
-      </View>
+      </TouchableOpacity>
     </ScrollView>
   );
 }

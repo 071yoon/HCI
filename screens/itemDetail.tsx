@@ -51,8 +51,7 @@ const styles = StyleSheet.create({
     },
     ppl: {
         alignSelf: 'center',
-        marginTop: 3,
-        marginBottom: 3,
+        top: 5,
     },
     button: {
         left: 280,
