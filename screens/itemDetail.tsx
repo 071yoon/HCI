@@ -30,8 +30,8 @@ export default function ItemDetails({ navigation }: any) {
             <Text style={styles.mainArticle}>카레 만들건데 양파 한 망은 너무 많은 것 같아서 고민이네요ㅠㅠ</Text>
             <Text style={styles.mainArticle}>오늘 저녁으로 먹을 예정이라 1시간 반 동안만 구할게요!</Text>
         </View>
+        <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 190, width: 50, height: 50}} />
         <View style={styles.down}>
-            <TouchableOpacity onPress={toggleState} style={{zIndex: 998, top: 0, left: 0, width: 50, height: 50, position: 'relative'}} />
             {toggle ? <Image style={styles.heart} source={require("../assets/images/heart_fill.png")} /> : <Image style={styles.heart} source={require("../assets/images/Heart.png")} />}
             {/* {toggle? <Text>FALSE</Text> : <Text>TRUE</Text>} */}
             <Text style={styles.together}>같이 구매하시겠어요?</Text>
@@ -39,6 +39,7 @@ export default function ItemDetails({ navigation }: any) {
                 <Text style={styles.ppl}>2 / 3</Text>
             </View>
         </View>
+
     </View>
   );
 }
@@ -54,26 +55,23 @@ const styles = StyleSheet.create({
         marginBottom: 3,
     },
     button: {
-        marginLeft: 110,
+        left: 280,
         width: 80,
         height: 30,
-        marginTop: 6,
         borderRadius: 10,
         backgroundColor: '#86CF3C'
     },
     together: {
-        marginBottom: 10,
-        marginLeft: 10,
-        marginTop: 10,
-        marginRight: 10,
+        position: 'absolute',
+        left: 120,
     },
     heart: {
-      width: 20,
-      height: 20,
+      zIndex: 13,
+      width: 25,
+      height: 25,
       top: 5,
       left: 5,
-      position: 'absolute',
-      zIndex: 999,
+      position: 'relative',
     },
     down: {
         position: 'absolute',
@@ -81,8 +79,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         height: '10%',
-        marginTop: 650,
-
+        bottom: -30,
     },
     mainArticle: {
         textAlign: 'left',
@@ -133,6 +130,8 @@ const styles = StyleSheet.create({
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
-        alignContent: 'center'
+        alignContent: 'center',
+        width: '100%',
+        height: '100%',
     }
 });

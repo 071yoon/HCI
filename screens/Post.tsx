@@ -43,8 +43,8 @@ export default function ProfileScreen() {
         </ScrollView>
       </View>
       <View style={styles.location}>
-        <Text style={{fontSize:20}}>위치</Text>
-        <TextInput
+        <Text style={{fontSize:20, height: 40}}>게시</Text>
+        <TextInput style={styles.locate}
         placeholder={'위치를 입력하세요'}
         onChangeText={setPlace}
         value={place}
@@ -78,17 +78,30 @@ export default function ProfileScreen() {
       />
       </View>
       <View style={styles.submit}>
-        <Text>게시하기</Text>
+        <Text style={styles.center}>게시하기</Text>
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  locate: {
+    position:'absolute',
+    right: 20,
+    borderWidth: 1,
+    width: 200,
+    height: 35,
+    borderRadius: 10,
+  },
+  center :{
+    position: 'absolute',
+    top: 5,
+    alignSelf: 'center',
+  },
   submit: {
     position: 'absolute',
     textAlign: 'center',
-    height: 10,
+    height: 30,
     width: 100,
     borderRadius: 30,
     backgroundColor: '#92DF45',
