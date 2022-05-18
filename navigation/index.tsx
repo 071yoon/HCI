@@ -15,7 +15,6 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
@@ -32,7 +31,7 @@ import RecordScreen from '../screens/RecordScreen';
 import Chatting from '../screens/Chatting';
 import OnionSearch from '../components/onionSearch';
 import Post from '../screens/Post';
-
+import LoginScreen from '../screens/Login';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -53,6 +52,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
+      <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="Chat" component={Chatting} options={{ title : '[양파] 필요하신분!!', headerTitleAlign: 'center'}}/>
       <Stack.Screen name="OnionSearch" component={OnionSearch} options={{headerTitleAlign: 'center'}}/>

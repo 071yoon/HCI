@@ -20,6 +20,7 @@ export type RootStackParamList = {
   NotFound: undefined;
   Chat: undefined;
   OnionSearch: undefined;
+  Login: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -37,6 +38,7 @@ export type RootTabParamList = {
   TabOneDetail: undefined;
   Chat: undefined;
   OnionSearch: undefined;
+  Login: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
