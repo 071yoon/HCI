@@ -1,9 +1,11 @@
-import { StyleSheet, TextInput, ScrollView, ImageBackground } from 'react-native';
+import { StyleSheet, TextInput, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-export default function SearchScreen() {
+import Navigation from '../navigation';
+
+export default function SearchScreen({ navigation }: any) {
   const [inputs, setInputs] = React.useState('');
   return (
     <View style={styles.container}>
@@ -13,6 +15,7 @@ export default function SearchScreen() {
         onChangeText={setInputs}
         value={inputs}
       />
+        <TouchableOpacity onPress={() => navigation.navigate('OnionSearch')} style={styles.submit}><Text style={{top: 5, alignSelf: 'center', color: 'white',}}>Search</Text></TouchableOpacity>
       <View style={styles.recent}>
         <Text style={{fontSize: 17}}>최근 검색어</Text>
         <View style={styles.recentBubble}>
@@ -31,11 +34,11 @@ export default function SearchScreen() {
             <Text style={styles.one}>포도</Text>
             </ImageBackground>
           </View>    
-          <View style={styles.recommendOne}>
+          <TouchableOpacity style={styles.recommendOne} onPress={() => navigation.navigate('OnionSearch')}>
             <ImageBackground source={require("../assets/images/onion.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>양파</Text>
             </ImageBackground>
-          </View>
+          </TouchableOpacity>
           <View style={styles.recommendOne}>
             <ImageBackground source={require("../assets/images/pepper.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
             <Text style={styles.one}>고춧가루</Text>
@@ -67,6 +70,15 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
+  submit: {
+    position: 'absolute',
+    top: 16,
+    right: 40,
+    width: 60,
+    height: 30,
+    borderRadius: 10,
+    backgroundColor: '#92DF45',
+  },
   issueText: {
     marginTop: 10,
   },
@@ -126,8 +138,9 @@ const styles = StyleSheet.create({
   input: {
     position: 'absolute',
     top: 0,
+    left: 10,
     height: 40,
-    width: '80%',
+    width: '65%',
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,

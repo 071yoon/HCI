@@ -30,6 +30,7 @@ import SearchScreen from '../screens/SearchScreen';
 import itemDetail from '../screens/itemDetail';
 import RecordScreen from '../screens/RecordScreen';
 import Chatting from '../screens/Chatting';
+import OnionSearch from '../components/onionSearch';
 import Post from '../screens/Post';
 
 
@@ -54,6 +55,7 @@ function RootNavigator() {
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="Chat" component={Chatting} options={{ title : '[양파] 필요하신분!!', headerTitleAlign: 'center'}}/>
+      <Stack.Screen name="OnionSearch" component={OnionSearch} options={{headerTitleAlign: 'center'}}/>
       <Stack.Screen name="TabOneDetail" component={itemDetail} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
