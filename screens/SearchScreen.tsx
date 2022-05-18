@@ -1,9 +1,6 @@
 import { StyleSheet, TextInput, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import React from 'react';
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-import Navigation from '../navigation';
 
 export default function SearchScreen({ navigation }: any) {
   const [inputs, setInputs] = React.useState('');

@@ -1,12 +1,7 @@
-import { Alert, StyleSheet,TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet,TouchableOpacity, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
-import { Image } from 'react-native';
 import React from 'react';
-import { ScrollView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { shouldUseActivityState } from 'react-native-screens';
+
 
 export default function LoginScreen({ navigation }: any) {
   return (

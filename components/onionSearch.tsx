@@ -1,11 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from './Themed';
-import { RootTabScreenProps } from '../types';
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
 
 export default function OnionSearch({ navigation }: any)  {

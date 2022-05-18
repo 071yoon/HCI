@@ -15,15 +15,9 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
-import HomeVector from '../assets/images/HomeVector.png';
-import PlaceVector from '../assets/images/PlaceVector.png';
-import ProfileVector from '../assets/images/ProfileVector.png';
-import SearchVector from '../assets/images/SearchVector.png';
-import RecordVector from '../assets/images/RecordVector.png';
 import MainTabOne from '../screens/MainTabOne';
 import SearchScreen from '../screens/SearchScreen';
 import itemDetail from '../screens/itemDetail';
@@ -88,7 +82,7 @@ function BottomTabNavigator() {
           title: '홈',
           headerShown: false, 
           tabBarIcon: ({ focused }) => {
-          return(<Image source={HomeVector} />)}
+          return(<Image  source={require('../assets/images/HomeVector.png')} />)}
         })}
       />
       <BottomTab.Screen
@@ -97,7 +91,7 @@ function BottomTabNavigator() {
         options={{
           title: '검색',
           tabBarIcon: ({ focused }) => {
-            return(<Image source={SearchVector} />)}
+            return(<Image source={require('../assets/images/SearchVector.png')} />)}
         }}
       />
       <BottomTab.Screen
@@ -107,7 +101,7 @@ function BottomTabNavigator() {
           headerShown: false,
           title: '글 작성',
           tabBarIcon: ({ focused }) => {
-            return(<Image source={PlaceVector} />)}
+            return(<Image source={require('../assets/images/PlaceVector.png')} />)}
         }}
       />
       <BottomTab.Screen
@@ -116,7 +110,7 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<'TabFour'>) => ({
           title: '기록',
           tabBarIcon: ({ focused }) => {
-            return(<Image source={RecordVector} />)}
+            return(<Image source={require('../assets/images/RecordVector.png')} />)}
         })}
       />
       <BottomTab.Screen
@@ -126,7 +120,7 @@ function BottomTabNavigator() {
           headerShown: false, 
           title: '내 정보',
           tabBarIcon: ({ focused }) => {
-            return(<Image source={ProfileVector} />)}
+            return(<Image source={require('../assets/images/ProfileVector.png')} />)}
         }}
       />
     </BottomTab.Navigator>

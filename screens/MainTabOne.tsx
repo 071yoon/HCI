@@ -1,14 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
 import { Image } from 'react-native';
 import { ScrollView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { shouldUseActivityState } from 'react-native-screens';
 import { TouchableOpacity } from 'react-native';
-import itemDetail from './itemDetail';
-
 
 export default function TabOneScreen({ navigation }: any)  {
   return (
@@ -80,6 +74,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <Text style={styles.mainText}>[대파] 대량 구매해요</Text>
             <Text style={styles.subText}>16:48:17</Text>
          </TouchableOpacity>
+         
          </View>
     </ScrollView>
   );
@@ -143,7 +138,9 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   container: {
+    top: 30,
     flex: 1,
+    marginBottom: 30,
   },
   topNav: {
     height: 60,
