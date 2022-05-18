@@ -1,69 +1,61 @@
 import React, {useState, useEffect} from 'react';
-import { Alert, StyleSheet, TextInput } from 'react-native';
+import { Alert, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
 import { Image } from 'react-native';
-import { ScrollView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { shouldUseActivityState } from 'react-native-screens';
-import { TouchableOpacity } from 'react-native';
-import { Button } from 'react-native';
-import {
-  Pressable,
-  Keyboard,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback
-  } from 'react-native';	
 
 export default function Chatting({ navigation }: any) {
   const [inputs, setInputs] = React.useState('');
-const [comment, setComment] = React.useState();
-let newComment = {
-    content: '',
-  };
+  const [tmp, setTmp] = React.useState(['']);
+  const [cnt, setCnt] = React.useState(0);
 
-  let data = 
-    {
-      comments: [
-        {
-          content: '그 사진 별로네요 1',
-          }
-        ]
-    }
-    // const addComment = (input:any) => {
-    //     newComment.content = input;
-    //     let arrCopy = [...comment];
-    //     arrCopy.push(newComment);
-    //     setComment(arrCopy);
-    //   };
+  function submit(){
+    setTmp([...tmp, inputs]);
+    setInputs('');
+    setCnt(cnt+1);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.chat}>
         <View style={styles.you}>
-        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
-        <Text style={styles.chatBoxYou}>안녕하세요!</Text>
+          <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+          <Text style={styles.chatBoxYou}>안녕하세요!</Text>
         </View>
         <View style={styles.you}>
-        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
-        <Text style={styles.chatBoxYou}>반갑습니다 ㅎㅎ</Text>
+          <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+          <Text style={styles.chatBoxYou}>반갑습니다 ㅎㅎ</Text>
         </View>
         <View style={styles.me}>
-        <Text style={styles.chatBoxMe}>다들 어디가 편하신가요?</Text>
+          <Text style={styles.chatBoxMe}>다들 어디가 편하신가요?</Text>
         </View>
         <View style={styles.me}>
-        <Text style={styles.chatBoxMe}>전 건대입구역이에요!</Text>
+          <Text style={styles.chatBoxMe}>전 건대입구역이에요!</Text>
         </View>
+        {cnt >= 1 ? (
+        <View style={styles.me}>
+          <Text style={styles.chatBoxMe}>{tmp[1]}</Text>
+        </View>) : null}
+        {cnt >= 2 ? (
+        <View style={styles.me}>
+          <Text style={styles.chatBoxMe}>{tmp[2]}</Text>
+        </View>) : null}
+        {cnt >= 3 ? (
+        <View style={styles.me}>
+          <Text style={styles.chatBoxMe}>{tmp[3]}</Text>
+        </View>) : null}
       </View>
         <View style={styles.down}>
-          <Image style={styles.plus} source={require("../assets/images/plus.png")} />
+          <TouchableOpacity>
+            <Image style={styles.plus} source={require("../assets/images/plus.png")} />
+          </TouchableOpacity>
           <TextInput
           style={styles.input}
           placeholder={'메시지를 입력하세요'}
           onChangeText={setInputs}
           value={inputs}
           />
-          <Image style={styles.plus} source={require("../assets/images/send.png")} />
+          <TouchableOpacity onPress={(submit)}>
+            <Image style={styles.plus} source={require("../assets/images/send.png")} />
+          </TouchableOpacity>
         </View>
     </View>
   );
@@ -128,44 +120,10 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
 
     },
-    mainArticle: {
-        textAlign: 'left',
-        fontSize: 20,
-    },
-    profileLocation: {
-        marginLeft: 60,
-        marginTop: 20,
-    },
-    profileTime: {
-        fontSize: 13,
-        position: 'absolute',
-        marginTop: 35,
-        marginLeft: 80,
-    },
-    profileName: {
-        fontSize: 20,
-        marginLeft: 10,
-        marginTop: 8,
-    },
     profileImg: {
         width: 36,
         height: 36,
         marginRight:10
-    },
-    separator: {
-        position: 'absolute',
-        marginTop: 68,
-        height: 2,
-        width: '80%',
-        marginLeft: '10%',
-    },
-    profile: {
-        position: 'relative',
-        alignContent: 'center',
-        width: '100%',
-        height: 70,
-        display: 'flex',
-        flexDirection: 'row',
     },
     img: {
         width: 250,
