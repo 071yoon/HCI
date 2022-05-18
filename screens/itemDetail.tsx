@@ -8,6 +8,10 @@ export default function ItemDetails({ navigation }: any) {
   function toggleState() {
     setToggle(!toggle);
   }
+  const [cntToggle, setcntToggle] = React.useState(false);
+  function cntToggleState() {
+    setcntToggle(!cntToggle);
+  }
   return (
     <View style={styles.container}>
       <Image style={styles.img} source={require("../assets/images/onion.jpg")} />
@@ -27,9 +31,9 @@ export default function ItemDetails({ navigation }: any) {
       <View style={styles.down}>
         {toggle ? <Image style={styles.heart} source={require("../assets/images/heart_fill.png")} /> : <Image style={styles.heart} source={require("../assets/images/Heart.png")} />}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
-        <View style={styles.button}>
-          {toggle ? <Text style={styles.ppl}>2 / 3</Text> : <Text style={styles.ppl}>1 / 3</Text>}
-        </View>
+        <TouchableOpacity style={styles.button} onPress={cntToggleState}>
+          {cntToggle ? <Text style={styles.ppl}>2 / 3</Text> : <Text style={styles.ppl}>1 / 3</Text>}
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -43,6 +47,7 @@ const styles = StyleSheet.create({
   ppl: {
     alignSelf: 'center',
     top: 5,
+    color: 'white',
   },
   button: {
     left: 280,
