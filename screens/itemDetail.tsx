@@ -16,7 +16,9 @@ export default function ItemDetails({ navigation }: any) {
     <View style={styles.container}>
       <Image style={styles.img} source={require("../assets/images/onion.jpg")} />
       <View style={styles.profile}>
-        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+        <TouchableOpacity onPress={() => navigation.navigate('OnionProfile')}>
+          <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+        </TouchableOpacity>
         <Text style={styles.profileName}>양파좋아</Text>
         <Text style={styles.profileTime}>1시간 전</Text>
         <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>

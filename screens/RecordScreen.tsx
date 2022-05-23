@@ -7,7 +7,6 @@ import Gwansim from '../components/gwansim';
 export default function RecordScreen({ navigation }: any) {
   const [toggle, setToggle] = React.useState(true);
   function toggleState() {
-    console.log('test');
     setToggle(!toggle);
   }
   return (

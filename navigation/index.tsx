@@ -25,6 +25,7 @@ import RecordScreen from '../screens/RecordScreen';
 import Chatting from '../screens/Chatting';
 import OnionSearch from '../components/onionSearch';
 import Post from '../screens/Post';
+import OnionProfile from '../components/OnionProfile';
 import LoginScreen from '../screens/Login';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -48,8 +49,9 @@ function RootNavigator() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="OnionProfile" component={OnionProfile} options={{ title: 'Profile' }}/>
       <Stack.Screen name="Chat" component={Chatting} options={{ title : '[양파] 필요하신분!!', headerTitleAlign: 'center'}}/>
-      <Stack.Screen name="OnionSearch" component={OnionSearch} options={{headerTitleAlign: 'center'}}/>
+      <Stack.Screen name="OnionSearch" component={OnionSearch} options={{title: 'Search'}}/>
       <Stack.Screen name="TabOneDetail" component={itemDetail} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
