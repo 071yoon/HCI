@@ -13,6 +13,10 @@ export default function ProfileScreen() {
   const [place, setPlace] = React.useState('');
 
   function resetInfos(){
+    if (name === '' || cnt === '' || title === '' || info === '' || place === ''){
+      Alert.alert('모든 항목을 작성해주십시오');
+      return;
+    }
     Alert.alert('게시완료되었습니다');
     setName('');
     setCnt('');
