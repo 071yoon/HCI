@@ -14,18 +14,16 @@ export default function App() {
     return null;
   } else {
     return (
-      <View style={{styles.Container}}>
-        <SafeAreaProvider>
-          <Navigation colorScheme={colorScheme} />
-          <StatusBar />
-        </SafeAreaProvider>
-      </View>
+      <SafeAreaProvider>
+        <Navigation colorScheme={colorScheme} />
+        <StatusBar />
+      </SafeAreaProvider>
     );
   }
 }
 
 const styles = StyleSheet.create({
   Container: {
-    fontFamily: 'LeferiBaseRegular';
-  }
-})
+    fontFamily: "LeferiBaseRegular",
+  },
+});
