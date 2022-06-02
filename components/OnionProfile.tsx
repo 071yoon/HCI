@@ -12,13 +12,19 @@ export default function OnionProfile() {
   return (
     <View style={styles.container}>
       <View style={styles.profile}>
-        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+        <Image
+          style={styles.profileImg}
+          source={require("../assets/images/onionProfile.png")}
+        />
         <View style={styles.profileText}>
           <Text style={styles.profileTitle}>양파좋아</Text>
           <Text style={styles.profileSubTitle}>서울 특별시 광진구</Text>
           <TouchableOpacity onPress={() => {}} style={styles.profileEdit}>
             <Text style={styles.profileEditText}>프로필 설정</Text>
-            <Image style={styles.profileEditImage} source={require("../assets/images/brightness_5.png")} />
+            <Image
+              style={styles.profileEditImage}
+              source={require("../assets/images/brightness_5.png")}
+            />
           </TouchableOpacity>
         </View>
       </View>

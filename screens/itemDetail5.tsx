@@ -1,7 +1,7 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
-import React from 'react';
-import { Text, View } from '../components/Themed';
-import { Image } from 'react-native';
+import { StyleSheet, TouchableOpacity } from "react-native";
+import React from "react";
+import { Text, View } from "../components/Themed";
+import { Image } from "react-native";
 
 export default function ItemDetails({ navigation }: any) {
   const [toggle, setToggle] = React.useState(false);
@@ -14,27 +14,59 @@ export default function ItemDetails({ navigation }: any) {
   }
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../assets/images/pepper.jpg")} />
+      <Image
+        style={styles.img}
+        source={require("../assets/images/pepper.jpg")}
+      />
       <View style={styles.profile}>
-        <TouchableOpacity onPress={() => navigation.navigate('OnionProfile')}>
-          <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+        <TouchableOpacity onPress={() => navigation.navigate("OnionProfile")}>
+          <Image
+            style={styles.profileImg}
+            source={require("../assets/images/onionProfile.png")}
+          />
         </TouchableOpacity>
         <Text style={styles.profileName}>양파좋아</Text>
         <Text style={styles.profileTime}>10시간 전</Text>
         <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>
-        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 
+        <View
+          style={styles.separator}
+          lightColor="#eee"
+          darkColor="rgba(255,255,255,0.1)"
+        />
       </View>
-        <View style={styles.chatBox}>
-        <Text style={styles.mainArticle}>고춧가루 남는데 나눠 가지실 분 계신가요?</Text>
-        <Text style={styles.mainArticle}>집에서 요리를 자주 하지 않아 고춧가루 쓸 일이 없네요.. 원하는만큼 가져가세요!</Text>
+      <View style={styles.chatBox}>
+        <Text style={styles.mainArticle}>
+          고춧가루 남는데 나눠 가지실 분 계신가요?
+        </Text>
+        <Text style={styles.mainArticle}>
+          집에서 요리를 자주 하지 않아 고춧가루 쓸 일이 없네요.. 원하는만큼
+          가져가세요!
+        </Text>
         <Text style={styles.mainArticle}>10일 동안 모집할게요.</Text>
       </View>
-      <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 190, width: 50, height: 50}} />
+      <TouchableOpacity
+        onPress={toggleState}
+        style={{ zIndex: 10, top: 190, width: 50, height: 50 }}
+      />
       <View style={styles.down}>
-        {toggle ? <Image style={styles.heart} source={require("../assets/images/heart_fill.png")} /> : <Image style={styles.heart} source={require("../assets/images/Heart.png")} />}
+        {toggle ? (
+          <Image
+            style={styles.heart}
+            source={require("../assets/images/heart_fill.png")}
+          />
+        ) : (
+          <Image
+            style={styles.heart}
+            source={require("../assets/images/Heart.png")}
+          />
+        )}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
         <TouchableOpacity style={styles.button} onPress={cntToggleState}>
-          {cntToggle ? <Text style={styles.ppl}>1 / 3</Text> : <Text style={styles.ppl}>1 / 3</Text>}
+          {cntToggle ? (
+            <Text style={styles.ppl}>1 / 3</Text>
+          ) : (
+            <Text style={styles.ppl}>1 / 3</Text>
+          )}
         </TouchableOpacity>
       </View>
     </View>
@@ -45,22 +77,22 @@ const styles = StyleSheet.create({
   chatBox: {
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 10
+    marginTop: 10,
   },
   ppl: {
-    alignSelf: 'center',
+    alignSelf: "center",
     top: 5,
-    color: 'white',
+    color: "white",
   },
   button: {
     left: 280,
     width: 80,
     height: 30,
     borderRadius: 10,
-    backgroundColor: '#86CF3C'
+    backgroundColor: "#86CF3C",
   },
   together: {
-    position: 'absolute',
+    position: "absolute",
     left: 120,
   },
   heart: {
@@ -69,18 +101,18 @@ const styles = StyleSheet.create({
     height: 25,
     top: 5,
     left: 5,
-    position: 'relative',
+    position: "relative",
   },
   down: {
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    height: '10%',
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    height: "10%",
     bottom: -30,
   },
   mainArticle: {
-    textAlign: 'left',
+    textAlign: "left",
     fontSize: 18,
   },
   profileLocation: {
@@ -89,7 +121,7 @@ const styles = StyleSheet.create({
   },
   profileTime: {
     fontSize: 13,
-    position: 'absolute',
+    position: "absolute",
     marginTop: 35,
     marginLeft: 80,
   },
@@ -105,33 +137,33 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   separator: {
-    position: 'absolute',
+    position: "absolute",
     marginTop: 68,
     height: 2,
-    width: '80%',
-    marginLeft: '10%',
+    width: "80%",
+    marginLeft: "10%",
   },
   profile: {
-    position: 'relative',
-    alignContent: 'center',
-    width: '100%',
+    position: "relative",
+    alignContent: "center",
+    width: "100%",
     height: 70,
-    display: 'flex',
-    flexDirection: 'row',
-    marginLeft:10
+    display: "flex",
+    flexDirection: "row",
+    marginLeft: 10,
   },
   img: {
-    width: '100%',
+    width: "100%",
     height: 300,
-    alignSelf: 'center',
-    marginVertical:20,
+    alignSelf: "center",
+    marginVertical: 20,
   },
   container: {
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignContent: 'center',
-    width: '100%',
-    height: '100%',
-  }
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+    width: "100%",
+    height: "100%",
+  },
 });

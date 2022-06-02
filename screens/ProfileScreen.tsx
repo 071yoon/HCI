@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     display: "flex",
     marginHorizontal: 20,
     marginBottom: 30,
-    marginTop:10
+    marginTop: 10,
   },
   menuText: {
     display: "flex",
