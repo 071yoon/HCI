@@ -12,7 +12,7 @@ export default function TabOneScreen({ navigation }: any)  {
         <Image style={styles.alarm} source={require("../assets/images/Alarm.png")} />
         </View>
         <View style={styles.main}>
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail1')}>
             <View style={styles.count}>
             <Text style={styles.countText}>2 / 3</Text>
             </View>
@@ -23,7 +23,7 @@ export default function TabOneScreen({ navigation }: any)  {
         </TouchableOpacity>
 
 
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail2')}>
             <View style={styles.count}>
             <Text style={styles.countText}>1 / 2</Text>
             </View>
@@ -34,7 +34,7 @@ export default function TabOneScreen({ navigation }: any)  {
         </TouchableOpacity>
 
         
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail3')}>
             <View style={styles.count}>
             <Text style={styles.countText}>1 / 3</Text>
             </View>
@@ -44,7 +44,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <Text style={styles.subText}>20:50:34</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail4')}>
             <View style={styles.count}>
             <Text style={styles.countText}>2 / 4</Text>
             </View>
@@ -54,7 +54,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <Text style={styles.subText}>02:50:23</Text>         
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail5')}>
             <View style={styles.count}>
             <Text style={styles.countText}>2 / 4</Text>
             </View>
@@ -64,7 +64,7 @@ export default function TabOneScreen({ navigation }: any)  {
             <Text style={styles.subText}>06:30:32</Text>         
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail')}>    
+        <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail6')}>    
             <View style={styles.count}>
             <Text style={styles.countText}>1 / 5</Text>
             </View>

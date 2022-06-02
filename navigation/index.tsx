@@ -20,7 +20,12 @@ import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../typ
 import LinkingConfiguration from './LinkingConfiguration';
 import MainTabOne from '../screens/MainTabOne';
 import SearchScreen from '../screens/SearchScreen';
-import itemDetail from '../screens/itemDetail';
+import itemDetail1 from '../screens/itemDetail1';
+import itemDetail2 from '../screens/itemDetail2';
+import itemDetail3 from '../screens/itemDetail3';
+import itemDetail4 from '../screens/itemDetail4';
+import itemDetail5 from '../screens/itemDetail5';
+import itemDetail6 from '../screens/itemDetail6';
 import RecordScreen from '../screens/RecordScreen';
 import Chatting from '../screens/Chatting';
 import OnionSearch from '../components/onionSearch';
@@ -52,7 +57,12 @@ function RootNavigator() {
       <Stack.Screen name="OnionProfile" component={OnionProfile} options={{ title: 'Profile' }}/>
       <Stack.Screen name="Chat" component={Chatting} options={{ title : '[양파] 필요하신분!!', headerTitleAlign: 'center'}}/>
       <Stack.Screen name="OnionSearch" component={OnionSearch} options={{title: 'Search'}}/>
-      <Stack.Screen name="TabOneDetail" component={itemDetail} />
+      <Stack.Screen name="TabOneDetail1" component={itemDetail1} options={{ title : '[양파] 필요하신분!!'}} />
+      <Stack.Screen name="TabOneDetail2" component={itemDetail2} options={{ title : '[엽떡] 같이 먹을 분 찾음'}} />
+      <Stack.Screen name="TabOneDetail3" component={itemDetail3} options={{ title : '[포도] 먹고 싶어요'}} />
+      <Stack.Screen name="TabOneDetail4" component={itemDetail4} options={{ title : '[사과] 같이 구매하실 분'}} />
+      <Stack.Screen name="TabOneDetail5" component={itemDetail5} options={{ title : '[고춧가루] 나눠요'}} />
+      <Stack.Screen name="TabOneDetail6" component={itemDetail6} options={{ title : '[대파] 대량 구매해요'}} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

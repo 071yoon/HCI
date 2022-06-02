@@ -14,27 +14,27 @@ export default function ItemDetails({ navigation }: any) {
   }
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../assets/images/onion.jpg")} />
+      <Image style={styles.img} source={require("../assets/images/pepper.jpg")} />
       <View style={styles.profile}>
         <TouchableOpacity onPress={() => navigation.navigate('OnionProfile')}>
           <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
         </TouchableOpacity>
-        <Text style={styles.profileName}>양파좋아</Text>
-        <Text style={styles.profileTime}>1시간 전</Text>
+        <Text style={styles.profileName}></Text>
+        <Text style={styles.profileTime}>10시간 전</Text>
         <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 
       </View>
         <View style={styles.chatBox}>
-        <Text style={styles.mainArticle}>양파 같이 구매하실 분 계신가요?</Text>
-        <Text style={styles.mainArticle}>카레 만들건데 양파 한 망은 너무 많은 것 같아서 고민이네요ㅠㅠ</Text>
-        <Text style={styles.mainArticle}>오늘 저녁으로 먹을 예정이라 1시간 반 동안만 구할게요!</Text>
+        <Text style={styles.mainArticle}>고춧가루 남는데 나눠 가지실 분 계신가요?</Text>
+        <Text style={styles.mainArticle}>집에서 요리를 자주 하지 않아 고춧가루 쓸 일이 없네요.. 원하는만큼 가져가세요!</Text>
+        <Text style={styles.mainArticle}>10일 동안 모집할게요.</Text>
       </View>
       <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 190, width: 50, height: 50}} />
       <View style={styles.down}>
         {toggle ? <Image style={styles.heart} source={require("../assets/images/heart_fill.png")} /> : <Image style={styles.heart} source={require("../assets/images/Heart.png")} />}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
         <TouchableOpacity style={styles.button} onPress={cntToggleState}>
-          {cntToggle ? <Text style={styles.ppl}>2 / 3</Text> : <Text style={styles.ppl}>1 / 3</Text>}
+          {cntToggle ? <Text style={styles.ppl}>1 / 3</Text> : <Text style={styles.ppl}>1 / 3</Text>}
         </TouchableOpacity>
       </View>
     </View>
@@ -43,8 +43,9 @@ export default function ItemDetails({ navigation }: any) {
 
 const styles = StyleSheet.create({
   chatBox: {
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10
   },
   ppl: {
     alignSelf: 'center',
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
   },
   mainArticle: {
     textAlign: 'left',
-    fontSize: 20,
+    fontSize: 18,
   },
   profileLocation: {
     marginLeft: 60,
@@ -117,11 +118,13 @@ const styles = StyleSheet.create({
     height: 70,
     display: 'flex',
     flexDirection: 'row',
+    marginLeft:10
   },
   img: {
-    width: 250,
+    width: '100%',
     height: 250,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginVertical:20,
   },
   container: {
     position: 'relative',
