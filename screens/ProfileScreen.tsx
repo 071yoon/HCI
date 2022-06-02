@@ -15,11 +15,6 @@ export default function ProfileScreen() {
       <View style={styles.topNav}>
         <Image style={styles.bar} source={require("../assets/images/threeBar.png")} />
         <Image style={styles.alarm} source={require("../assets/images/Alarm.png")} />
-        <View
-          style={styles.separator}
-          lightColor="#eee"
-          darkColor="rgba(255,255,255,0.1)"
-        />
       </View>
       <View style={styles.profile}>
         <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
@@ -246,20 +241,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topNav: {
-    marginTop: 50,
+    display: "flex",
+    flexDirection:'row',
+    marginTop: 40,
     height: 60,
-    position: "relative",
+    justifyContent: "space-between",
     alignContent: "center",
   },
   bar: {
-    position: "absolute",
     marginLeft: 20,
     marginTop: 15,
   },
   alarm: {
-    position: "absolute",
-    marginLeft: 340,
     marginTop: 10,
+    marginRight: 20
   },
   separator: {
     marginVertical: 50,
