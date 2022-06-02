@@ -15,7 +15,11 @@ export default function ItemDetails1({ navigation }: any) {
     setcntToggle(!cntToggle);
   }
   return (
+
     <View style={styles.container}>
+      <View style={styles.blink}>
+        <Text>1명 남았습니다.</Text>
+      </View>
       <Image
         style={styles.img}
         source={require("../assets/images/onion.jpg")}
