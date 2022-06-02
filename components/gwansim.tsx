@@ -24,42 +24,48 @@ export default function gwansim() {
           </View>
           <View style={styles.separator} />
         </TouchableOpacity>
-        <View style={styles.profile}>
-          <Image
-            style={styles.img}
-            source={require("../assets/images/prof1.png")}
-          />
-          <Text style={styles.title}>이진</Text>
-          <Text style={styles.message}>[양파] 같이 사요</Text>
-          <View style={styles.bubble}>
-            <Text style={styles.bubbleText}>1/3</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("TabOneDetail5")}>
+          <View style={styles.profile}>
+            <Image
+              style={styles.img}
+              source={require("../assets/images/prof1.png")}
+            />
+            <Text style={styles.title}>이진</Text>
+            <Text style={styles.message}>[고춧가루] 나눠요</Text>
+            <View style={styles.bubble}>
+              <Text style={styles.bubbleText}>1/3</Text>
+            </View>
+            <View style={styles.separator} />
           </View>
-          <View style={styles.separator} />
-        </View>
-        <View style={styles.profile}>
-          <Image
-            style={styles.img}
-            source={require("../assets/images/prof2.png")}
-          />
-          <Text style={styles.title}>희도</Text>
-          <Text style={styles.message}>[엽기 떡볶이] 같이 드실 분~</Text>
-          <View style={styles.bubble}>
-            <Text style={styles.bubbleText}>1/2</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("TabOneDetail2")}>
+          <View style={styles.profile}>
+            <Image
+              style={styles.img}
+              source={require("../assets/images/prof2.png")}
+            />
+            <Text style={styles.title}>희도</Text>
+            <Text style={styles.message}>[엽기 떡볶이] 같이 드실 분~</Text>
+            <View style={styles.bubble}>
+              <Text style={styles.bubbleText}>1/2</Text>
+            </View>
+            <View style={styles.separator} />
           </View>
-          <View style={styles.separator} />
-        </View>
-        <View style={styles.profile}>
-          <Image
-            style={styles.img}
-            source={require("../assets/images/prof3.png")}
-          />
-          <Text style={styles.title}>유림</Text>
-          <Text style={styles.message}>[사과] 공동구매 원해요</Text>
-          <View style={styles.bubble}>
-            <Text style={styles.bubbleText}>4/7</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("TabOneDetail3")}>
+          <View style={styles.profile}>
+            <Image
+              style={styles.img}
+              source={require("../assets/images/prof3.png")}
+            />
+            <Text style={styles.title}>유림</Text>
+            <Text style={styles.message}>[포도] 공동구매 원해요</Text>
+            <View style={styles.bubble}>
+              <Text style={styles.bubbleText}>4/7</Text>
+            </View>
+            <View style={styles.separator} />
           </View>
-          <View style={styles.separator} />
-        </View>
+        </TouchableOpacity>
       </View>
     </>
   );
