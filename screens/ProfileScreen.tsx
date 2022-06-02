@@ -1,13 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Text, View } from "../components/Themed";
-import { RootTabScreenProps } from "../types";
 import { Image } from "react-native";
-import { ScrollView } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { shouldUseActivityState } from "react-native-screens";
 import { TouchableOpacity } from "react-native";
-import itemDetail from "./itemDetail";
 
 export default function ProfileScreen() {
   return (
@@ -17,9 +11,9 @@ export default function ProfileScreen() {
         <Image style={styles.alarm} source={require("../assets/images/Alarm.png")} />
       </View>
       <View style={styles.profile}>
-        <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+        <Image style={styles.profileImg} source={require("../assets/images/konkuk.jpg")} />
         <View style={styles.profileText}>
-          <Text style={styles.profileTitle}>양파좋아</Text>
+          <Text style={styles.profileTitle}>건국맨</Text>
           <Text style={styles.profileSubTitle}>서울 특별시 광진구</Text>
           <TouchableOpacity onPress={() => {}} style={styles.profileEdit}>
             <Text style={styles.profileEditText}>프로필 설정</Text>
