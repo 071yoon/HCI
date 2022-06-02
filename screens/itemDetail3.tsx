@@ -14,6 +14,17 @@ export default function ItemDetails({ navigation }: any) {
   }
   return (
     <View style={styles.container}>
+      <View style = {{height:30, marginTop:20}}>
+        {
+          cntToggle?
+          <Text style={styles.num}>
+          1명 남았습니다.
+      </Text> :
+              <Text style={styles.num}>
+              2명 남았습니다.
+          </Text>
+        }
+      </View>
       <Image
         style={styles.img}
         source={require("../assets/images/grape.jpg")}
@@ -66,6 +77,12 @@ export default function ItemDetails({ navigation }: any) {
 }
 
 const styles = StyleSheet.create({
+  num: {
+    fontSize: 22,
+    color: "black",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
   chatBox: {
     marginLeft: 20,
     marginRight: 10,
@@ -157,8 +174,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   img: {
-    width: "100%",
-    height: 300,
+    width: "70%",
+    height: 200,
     alignSelf: "center",
     marginVertical: 20,
   },

@@ -156,8 +156,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   img: {
-    width: "100%",
-    height: 300,
+    width: "70%",
+    height: 200,
     alignSelf: "center",
     marginVertical: 20,
   },
