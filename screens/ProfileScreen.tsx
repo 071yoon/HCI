@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
   menu: {
     display: "flex",
     marginHorizontal: 20,
-    marginBottom: 20,
+    marginBottom: 30,
+    marginTop:10
   },
   menuText: {
     display: "flex",

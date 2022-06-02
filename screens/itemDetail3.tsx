@@ -14,7 +14,7 @@ export default function ItemDetails({ navigation }: any) {
   }
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../assets/images/hot.png")} />
+      <Image style={styles.img} source={require("../assets/images/grape.jpg")} />
       <View style={styles.profile}>
         <TouchableOpacity onPress={() => navigation.navigate('prof3')}>
           <Image style={styles.profileImg} source={require("../assets/images/prof3.png")} />
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   img: {
     width: '100%',
-    height: 250,
+    height: 300,
     alignSelf: 'center',
     marginVertical:20,
   },

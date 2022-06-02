@@ -14,64 +14,64 @@ export default function TabOneScreen({ navigation }: any)  {
         <View style={styles.main}>
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail1')}>
             <View style={styles.count}>
-            <Text style={styles.countText}>2 / 3</Text>
+            <Text style={styles.countText}>남은 인원 : 2</Text>
             </View>
             <Image style={styles.boxImage} source={require("../assets/images/onion.jpg")}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[양파] 필요하신 분!!</Text>
-            <Text style={styles.subText}>01:23:37</Text>
+            <Text style={styles.subText}>모집 인원 : 3</Text>
         </TouchableOpacity>
 
 
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail2')}>
             <View style={styles.count}>
-            <Text style={styles.countText}>1 / 2</Text>
+            <Text style={styles.countText}>남은 인원 : 1</Text>
             </View>
             <Image style={styles.boxImage} source={require("../assets/images/hot.png")}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[엽떡] 같이 먹을 분 찾음</Text>
-            <Text style={styles.subText}>00:40:36</Text>
+            <Text style={styles.subText}>모집 인원 : 2</Text>
         </TouchableOpacity>
 
         
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail3')}>
             <View style={styles.count}>
-            <Text style={styles.countText}>1 / 3</Text>
+            <Text style={styles.countText}>남은 인원 : 1</Text>
             </View>
             <Image style={styles.boxImage} source={require("../assets/images/grape.jpg")}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[포도] 먹고 싶어요</Text>
-            <Text style={styles.subText}>20:50:34</Text>
+            <Text style={styles.subText}>모집 인원 : 3</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail4')}>
             <View style={styles.count}>
-            <Text style={styles.countText}>2 / 4</Text>
+            <Text style={styles.countText}>남은 인원 : 2</Text>
             </View>
             <Image style={styles.boxImage} source={require("../assets/images/apple.jpg")}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[사과] 같이 구매하실 분</Text>
-            <Text style={styles.subText}>02:50:23</Text>         
+            <Text style={styles.subText}>모집 인원 : 3</Text>         
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail5')}>
             <View style={styles.count}>
-            <Text style={styles.countText}>2 / 4</Text>
+            <Text style={styles.countText}>남은 인원 : 2</Text>
             </View>
             <Image style={styles.boxImage} source={require("../assets/images/pepper.jpg")}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[고춧가루] 나눠요</Text>
-            <Text style={styles.subText}>06:30:32</Text>         
+            <Text style={styles.subText}>모집 인원 : 4</Text>         
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail6')}>    
             <View style={styles.count}>
-            <Text style={styles.countText}>1 / 5</Text>
+            <Text style={styles.countText}>남은 인원 : 1</Text>
             </View>
             <Image style={styles.boxImage} source={require("../assets/images/pa.jpg")}/>
             <View style={styles.boxSeparator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.mainText}>[대파] 대량 구매해요</Text>
-            <Text style={styles.subText}>16:48:17</Text>
+            <Text style={styles.subText}>모집 인원 : 5</Text>
          </TouchableOpacity>
          
          </View>

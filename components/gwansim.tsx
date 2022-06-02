@@ -9,7 +9,7 @@ export default function gwansim(){
     return(
       <>
         <View style={styles.container}>
-          <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('TabOneDetail')}>
+          <TouchableOpacity style={styles.profile} onPress={() => navigation.navigate('TabOneDetail1')}>
             <Image style={styles.img} source={require('../assets/images/onionProfile.png')} />
             <Text style={styles.title}>양파좋아</Text>
             <Text style={styles.message}>[양파] 양파 필요하신분!!</Text>
