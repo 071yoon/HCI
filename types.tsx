@@ -23,6 +23,8 @@ export type RootStackParamList = {
   NotFound: undefined;
   Chat: undefined;
   OnionSearch: undefined;
+  BlankSearch: undefined;
+  GrapeSearch: undefined;
   Login: undefined;
   OnionProfile: undefined;
   TabOneDetail1: undefined;
@@ -50,8 +52,10 @@ export type RootTabParamList = {
   TabOneDetail5: undefined;
   TabOneDetail6: undefined;
   OnionProfile: undefined;
+  BlankSearch: undefined;
   Chat: undefined;
   OnionSearch: undefined;
+  GrapeSearch: undefined;
   Login: undefined;
 };
 

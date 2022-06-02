@@ -10,21 +10,21 @@ export default function OnionSearch({ navigation }: any) {
       <View style={styles.main}>
         <TouchableOpacity
           style={styles.boxContainer}
-          onPress={() => navigation.navigate("TabOneDetail1")}
+          onPress={() => navigation.navigate("TabOneDetail3")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 2</Text>
+            <Text style={styles.countText}>남은 인원 : 1</Text>
           </View>
           <Image
             style={styles.boxImage}
-            source={require("../assets/images/onion.jpg")}
+            source={require("../assets/images/grape.jpg")}
           />
           <View
             style={styles.boxSeparator}
             lightColor="#eee"
             darkColor="rgba(255,255,255,0.1)"
           />
-          <Text style={styles.mainText}>[양파] 필요하신 분!!</Text>
+          <Text style={styles.mainText}>[포도] 먹고 싶어요</Text>
           <Text style={styles.subText}>모집 인원 : 3</Text>
         </TouchableOpacity>
       </View>

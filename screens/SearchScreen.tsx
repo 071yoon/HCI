@@ -19,7 +19,13 @@ export default function SearchScreen({ navigation }: any) {
         value={inputs}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate("OnionSearch")}
+        onPress={() => {
+          if (inputs === "Onion" || inputs === "양파")
+            navigation.navigate("OnionSearch");
+          else if (inputs === "Grape" || inputs === "포도")
+            navigation.navigate("GrapeSearch");
+          else navigation.navigate("BlankSearch");
+        }}
         style={styles.submit}
       >
         <Text style={{ top: 5, alignSelf: "center", color: "white" }}>
@@ -39,7 +45,10 @@ export default function SearchScreen({ navigation }: any) {
         <Text style={{ fontSize: 17 }}>추천 검색어</Text>
         <View style={styles.recentBubble}>
           <ScrollView horizontal={true}>
-            <View style={styles.recommendOne}>
+            <TouchableOpacity
+              style={styles.recommendOne}
+              onPress={() => navigation.navigate("GrapeSearch")}
+            >
               <ImageBackground
                 source={require("../assets/images/grape.jpg")}
                 style={{ width: "100%", height: "100%" }}
@@ -50,7 +59,7 @@ export default function SearchScreen({ navigation }: any) {
                   <Text style={styles.text}>포도</Text>
                 </View>
               </ImageBackground>
-            </View>
+            </TouchableOpacity>
             <TouchableOpacity
               style={styles.recommendOne}
               onPress={() => navigation.navigate("OnionSearch")}

@@ -31,6 +31,8 @@ import itemDetail6 from "../screens/itemDetail6";
 import RecordScreen from "../screens/RecordScreen";
 import Chatting from "../screens/Chatting";
 import OnionSearch from "../components/onionSearch";
+import BlankSearch from "../components/blankSearch";
+import GrapeSearch from "../components/grapeSearch";
 import Post from "../screens/Post";
 import OnionProfile from "../components/OnionProfile";
 import LoginScreen from "../screens/Login";
@@ -74,6 +76,16 @@ function RootNavigator() {
       <Stack.Screen
         name="OnionSearch"
         component={OnionSearch}
+        options={{ title: "Onion" }}
+      />
+      <Stack.Screen
+        name="GrapeSearch"
+        component={GrapeSearch}
+        options={{ title: "Grape" }}
+      />
+      <Stack.Screen
+        name="BlankSearch"
+        component={BlankSearch}
         options={{ title: "Search" }}
       />
       <Stack.Screen
