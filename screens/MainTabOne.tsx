@@ -23,7 +23,7 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail1")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 2</Text>
+            <Text style={styles.countText}>남은 인원 : 1</Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -63,7 +63,7 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail3")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 1</Text>
+            <Text style={styles.countText}>남은 인원 : 2</Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -123,7 +123,7 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail6")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 1</Text>
+            <Text style={styles.countText}>남은 인원 : 3</Text>
           </View>
           <Image
             style={styles.boxImage}

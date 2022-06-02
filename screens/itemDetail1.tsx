@@ -21,12 +21,19 @@ export default function ItemDetails1({ navigation }: any) {
   }
   return (
     <View style={styles.container}>
-      <View>
-        <Text
+      <View style = {{height:30, marginTop:20}}>
+        {
+          cntToggle?
+          <Text style={styles.magam}>
+            마감되었습니다.
+          </Text> :
+          <Text
           style={[styles.textStyle, { display: showText ? "none" : "flex" }]}
         >
-          1명 남았습니다!{" "}
-        </Text>
+          마감 임박!{" "}
+        </Text>  
+        }
+        
       </View>
       <Image
         style={styles.img}
@@ -97,6 +104,12 @@ export default function ItemDetails1({ navigation }: any) {
 }
 
 const styles = StyleSheet.create({
+  magam: {
+    fontSize: 22,
+    color: "grey",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
   textStyle: {
     fontSize: 22,
     color: "red",
@@ -194,8 +207,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   img: {
-    width: "100%",
-    height: 300,
+    width: "70%",
+    height: 200,
     alignSelf: "center",
     marginVertical: 20,
   },
