@@ -35,7 +35,7 @@ export default function ProfileScreen() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.photo}>
-        <Text style={{fontSize:20}}>사진</Text>
+        <Text style={{fontSize:20, marginLeft: 20}}>사진</Text>
         <ScrollView horizontal={true}>
           <View style={styles.recommendOne}>
               <Image source={require("../assets/images/grapes.png")} style={{width: "100%", height: "100%"}}></Image>
@@ -55,7 +55,7 @@ export default function ProfileScreen() {
         </ScrollView>
       </View>
       <View style={styles.location}>
-        <Text style={{fontSize:20, height: 40}}>게시</Text>
+        <Text style={{fontSize:20, height: 40, marginLeft: 20}}>게시</Text>
         <View style={styles.essentialLocate}>
           <Text style={{color: 'red'}}>* </Text>
           <TextInput style={styles.locate}
@@ -221,6 +221,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     height: 100,
     width: 100,
+    borderRadius: 15,
     backgroundColor: 'rgba(0,0,0,0.1)',
   },
   photo: {
@@ -229,6 +230,7 @@ const styles = StyleSheet.create({
   container: {
     top: 50,
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: 'white'
   },
 });
