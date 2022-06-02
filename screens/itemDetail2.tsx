@@ -19,7 +19,7 @@ export default function ItemDetails({ navigation }: any) {
         <TouchableOpacity onPress={() => navigation.navigate('prof1')}>
           <Image style={styles.profileImg} source={require("../assets/images/prof1.png")} />
         </TouchableOpacity>
-        <Text style={styles.profileName}></Text>
+        <Text style={styles.profileName}>이진</Text>
         <Text style={styles.profileTime}>1시간 전</Text>
         <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 

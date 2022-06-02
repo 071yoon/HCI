@@ -1,10 +1,10 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from '../components/Themed';
-import { Image } from 'react-native';
-import { ScrollView } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet } from "react-native";
+import { Text, View } from "../components/Themed";
+import { Image } from "react-native";
+import { ScrollView } from "react-native";
+import { TouchableOpacity } from "react-native";
 
-export default function TabOneScreen({ navigation }: any)  {
+export default function TabOneScreen({ navigation }: any) {
   return (
     <ScrollView style={styles.container}>
         <View style={styles.topNav}>
@@ -81,73 +81,73 @@ export default function TabOneScreen({ navigation }: any)  {
 
 const styles = StyleSheet.create({
   mainText: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   subText: {
     fontSize: 12,
-    position: 'absolute',
-    color: 'gray',
+    position: "absolute",
+    color: "gray",
     marginTop: 175,
   },
   boxSeparator: {
     marginVertical: 7,
     height: 1,
-    width: '80%',
+    width: "80%",
   },
   boxImage: {
     width: 150,
     height: 100,
   },
   countText: {
-    textAlign: 'center',
+    textAlign: "center",
     marginTop: 5,
-    fontWeight: 'bold',
-    color: 'white',
+    fontWeight: "bold",
+    color: "white",
     fontSize: 17,
   },
   boxContainer: {
     // outline: none;
-    color: '#0070d2',
-    borderColor: '#dddbda',
-    position: 'relative',
+    color: "#0070d2",
+    borderColor: "#dddbda",
+    position: "relative",
     marginTop: 4,
     marginBottom: 20,
     marginLeft: 15,
     marginRight: 15,
     width: 150,
     height: 200,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 30,
-    overflow: 'hidden',
-    borderStyle: 'solid',
+    overflow: "hidden",
+    borderStyle: "solid",
     borderWidth: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
   count: {
-    backgroundColor: '#86cf3c',
+    backgroundColor: "#86cf3c",
     width: 150,
     height: 35,
     marginTop: 0,
   },
   main: {
     flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center'
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
   },
   container: {
     top: 30,
     flex: 1,
     marginBottom: 30,
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
   topNav: {
     display: "flex",
-    flexDirection:'row',
-    marginTop:10,
+    flexDirection: "row",
+    marginTop: 10,
     height: 60,
     justifyContent: "space-between",
     alignContent: "center",
@@ -158,11 +158,11 @@ const styles = StyleSheet.create({
   },
   alarm: {
     marginTop: 10,
-    marginRight: 20
+    marginRight: 20,
   },
   separator: {
     marginVertical: 50,
     height: 1,
-    width: '100%',
+    width: "100%",
   },
 });

@@ -7,17 +7,29 @@ export default function ProfileScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.topNav}>
-        <Image style={styles.bar} source={require("../assets/images/threeBar.png")} />
-        <Image style={styles.alarm} source={require("../assets/images/Alarm.png")} />
+        <Image
+          style={styles.bar}
+          source={require("../assets/images/threeBar.png")}
+        />
+        <Image
+          style={styles.alarm}
+          source={require("../assets/images/Alarm.png")}
+        />
       </View>
       <View style={styles.profile}>
-        <Image style={styles.profileImg} source={require("../assets/images/konkuk.jpg")} />
+        <Image
+          style={styles.profileImg}
+          source={require("../assets/images/konkuk.jpg")}
+        />
         <View style={styles.profileText}>
           <Text style={styles.profileTitle}>건국맨</Text>
           <Text style={styles.profileSubTitle}>서울 특별시 광진구</Text>
           <TouchableOpacity onPress={() => {}} style={styles.profileEdit}>
             <Text style={styles.profileEditText}>프로필 설정</Text>
-            <Image style={styles.profileEditImage} source={require("../assets/images/brightness_5.png")} />
+            <Image
+              style={styles.profileEditImage}
+              source={require("../assets/images/brightness_5.png")}
+            />
           </TouchableOpacity>
         </View>
       </View>
@@ -237,7 +249,7 @@ const styles = StyleSheet.create({
   },
   topNav: {
     display: "flex",
-    flexDirection:'row',
+    flexDirection: "row",
     marginTop: 40,
     height: 60,
     justifyContent: "space-between",
@@ -249,7 +261,7 @@ const styles = StyleSheet.create({
   },
   alarm: {
     marginTop: 10,
-    marginRight: 20
+    marginRight: 20,
   },
   separator: {
     marginVertical: 50,

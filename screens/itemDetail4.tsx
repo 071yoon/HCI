@@ -17,9 +17,9 @@ export default function ItemDetails({ navigation }: any) {
       <Image style={styles.img} source={require("../assets/images/apple.jpg")} />
       <View style={styles.profile}>
         <TouchableOpacity onPress={() => navigation.navigate('OnionProfile')}>
-          <Image style={styles.profileImg} source={require("../assets/images/onionProfile.png")} />
+          <Image style={styles.profileImg} source={require("../assets/images/konkuk.jpg")} />
         </TouchableOpacity>
-        <Text style={styles.profileName}></Text>
+        <Text style={styles.profileName}>건국맨</Text>
         <Text style={styles.profileTime}>3시간 전</Text>
         <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 
@@ -125,7 +125,8 @@ const styles = StyleSheet.create({
     height: 300,
     alignSelf: 'center',
     marginVertical:20,
-  },ainer: {
+  },
+  container: {
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -134,3 +135,4 @@ const styles = StyleSheet.create({
     height: '100%',
   }
 });
+
