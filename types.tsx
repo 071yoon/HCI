@@ -36,7 +36,12 @@ export type RootTabParamList = {
   TabFour: undefined;
   TabFive: undefined;
   TabOneMain: undefined;
-  TabOneDetail: undefined;
+  TabOneDetail1: undefined;
+  TabOneDetail2: undefined;
+  TabOneDetail3: undefined;
+  TabOneDetail4: undefined;
+  TabOneDetail5: undefined;
+  TabOneDetail6: undefined;
   OnionProfile: undefined;
   Chat: undefined;
   OnionSearch: undefined;

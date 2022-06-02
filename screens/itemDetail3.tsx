@@ -43,8 +43,9 @@ export default function ItemDetails({ navigation }: any) {
 
 const styles = StyleSheet.create({
   chatBox: {
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10
   },
   ppl: {
     alignSelf: 'center',
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
   },
   mainArticle: {
     textAlign: 'left',
-    fontSize: 20,
+    fontSize: 18,
   },
   profileLocation: {
     marginLeft: 60,
@@ -117,11 +118,13 @@ const styles = StyleSheet.create({
     height: 70,
     display: 'flex',
     flexDirection: 'row',
+    marginLeft:10
   },
   img: {
-    width: 250,
+    width: '100%',
     height: 250,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginVertical:20,
   },
   container: {
     position: 'relative',
