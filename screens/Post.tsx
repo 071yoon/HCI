@@ -13,16 +13,23 @@ export default function ProfileScreen() {
   const [place, setPlace] = React.useState('');
 
   function resetInfos(){
-    if (name === '' || cnt === '' || title === '' || info === '' || place === ''){
-      Alert.alert('모든 항목을 작성해주십시오');
-      return;
+    if (name === ''){
+      Alert.alert('상품명을 작성해주세요!');
+    } else if (title === '') {
+      Alert.alert('제목을 작성해주세요!');
+    } else if (cnt === '') {
+      Alert.alert('모집 인원을 작성해주세요!');
+    } else if (title === '') {
+      Alert.alert('상품명을 작성해주세요!');
+      
+    } else {
+      Alert.alert('게시완료되었습니다');
+      setName('');
+      setCnt('');
+      setTitle('');
+      setInfo('');
+      setPlace('');
     }
-    Alert.alert('게시완료되었습니다');
-    setName('');
-    setCnt('');
-    setTitle('');
-    setInfo('');
-    setPlace('');
   }
 
   return (
@@ -49,32 +56,44 @@ export default function ProfileScreen() {
       </View>
       <View style={styles.location}>
         <Text style={{fontSize:20, height: 40}}>게시</Text>
-        <TextInput style={styles.locate}
-        placeholder={'위치를 입력하세요'}
-        onChangeText={setPlace}
-        value={place}
-      />
+        <View style={styles.essentialLocate}>
+          <Text style={{color: 'red'}}>* </Text>
+          <TextInput style={styles.locate}
+          placeholder={'  위치를 입력하세요'}
+          onChangeText={setPlace}
+          value={place}
+        />
+        </View>
       </View>
       <View style={styles.items}>
 
-      <TextInput
-        style={styles.nameInput}
-        placeholder={'상품명'}
-        onChangeText={setName}
-        value={name}
-      />
-      <TextInput
-        style={styles.cntInput}
-        placeholder={'모집 인원'}
-        onChangeText={setCnt}
-        value={cnt}
-      />
-      <TextInput
-        style={styles.title}
-        placeholder={'제목'}
-        onChangeText={setTitle}
-        value={title}
-      />
+      <View style={styles.essentialName}>
+        <Text style={{color: 'red'}}>* </Text>
+        <TextInput
+          style={styles.nameInput}
+          placeholder={'상품명'}
+          onChangeText={setName}
+          value={name}
+        />
+      </View>
+      <View style={styles.essentialPeople}>
+        <Text style={{color: 'red'}}>* </Text>      
+        <TextInput
+          style={styles.cntInput}
+          placeholder={'모집 인원'}
+          onChangeText={setCnt}
+          value={cnt}
+       />
+      </View>
+      <View style={styles.essentialTitle}>
+        <Text style={{color: 'red'}}>* </Text>      
+        <TextInput
+          style={styles.title}
+          placeholder={'제목'}
+          onChangeText={setTitle}
+          value={title}
+        />
+      </View>
       <TextInput
         style={styles.info}
         placeholder={'내용을 입력해주세요'}
@@ -90,9 +109,35 @@ export default function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
+  essentialTitle: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'row',
+    left: 10,
+    top: 55,
+  },
+  essentialPeople: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'row',
+    top: 0,
+    left: 250,
+  },
+  essentialName: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'row',
+    top: 0,
+    left: 10,
+  },
+  essentialLocate : {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'row',
+    top: 0,
+    right: 30,
+  },
   locate: {
-    position:'absolute',
-    right: 20,
     borderWidth: 1,
     width: 200,
     height: 35,
@@ -115,40 +160,39 @@ const styles = StyleSheet.create({
   },
   info: {
     position: 'absolute',
-    top: 100,
+    left: 20,
+    top: 110,
     height: 250,
-    width: '90%',
+    width: 340,
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,
     padding: 10,
   },
   title: {
-    position: 'absolute',
-    top: 50,
+    position: 'relative',
     height: 40,
-    width: '90%',
+    width: 340,
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,
     padding: 10,
   },
   nameInput: {
-    position: 'absolute',
+    position: 'relative',
     top: 0,
     height: 40,
-    width: '60%',
+    width: 200,
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,
     padding: 10,
   },
   cntInput: {
-    position: 'absolute',
+    position: 'relative',
     top: 0,
-    right: 10,
     height: 40,
-    width: '30%',
+    width: 100,
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,
