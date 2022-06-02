@@ -1,7 +1,7 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
-import React from 'react';
-import { Text, View } from '../components/Themed';
-import { Image } from 'react-native';
+import { StyleSheet, TouchableOpacity } from "react-native";
+import React from "react";
+import { Text, View } from "../components/Themed";
+import { Image } from "react-native";
 
 export default function ItemDetails({ navigation }: any) {
   const [toggle, setToggle] = React.useState(false);
@@ -16,22 +16,43 @@ export default function ItemDetails({ navigation }: any) {
     <View style={styles.container}>
       <Image style={styles.img} source={require("../assets/images/hot.png")} />
       <View style={styles.profile}>
-        <TouchableOpacity onPress={() => navigation.navigate('prof1')}>
-          <Image style={styles.profileImg} source={require("../assets/images/prof1.png")} />
+        <TouchableOpacity onPress={() => navigation.navigate("prof1")}>
+          <Image
+            style={styles.profileImg}
+            source={require("../assets/images/prof2.png")}
+          />
         </TouchableOpacity>
-        <Text style={styles.profileName}>이진</Text>
+        <Text style={styles.profileName}>희도</Text>
         <Text style={styles.profileTime}>1시간 전</Text>
         <Text style={styles.profileLocation}>서울특별시 광진구 화양동 131</Text>
-        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 
+        <View
+          style={styles.separator}
+          lightColor="#eee"
+          darkColor="rgba(255,255,255,0.1)"
+        />
       </View>
-        <View style={styles.chatBox}>
+      <View style={styles.chatBox}>
         <Text style={styles.mainArticle}>2인 엽떡 같이 드실 분 계신가요?</Text>
-        <Text style={styles.mainArticle}>엽떡 먹고 싶은데, 같이 드실 분 구합니다..</Text>
-        <Text style={styles.mainArticle}>지금 너무 배고파서 1시간 내로 구합니다!</Text>
+        <Text style={styles.mainArticle}>
+          엽떡 먹고 싶은데, 같이 드실 분 구합니다..
+        </Text>
+        <Text style={styles.mainArticle}>
+          지금 너무 배고파서 1시간 내로 구합니다!
+        </Text>
       </View>
       <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 195, width: 50, height: 50}} />
       <View style={styles.down}>
-        {toggle ? <Image style={styles.heart} source={require("../assets/images/heart_fill.png")} /> : <Image style={styles.heart} source={require("../assets/images/Heart.png")} />}
+        {toggle ? (
+          <Image
+            style={styles.heart}
+            source={require("../assets/images/heart_fill.png")}
+          />
+        ) : (
+          <Image
+            style={styles.heart}
+            source={require("../assets/images/Heart.png")}
+          />
+        )}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
         {cntToggle ? <TouchableOpacity style={styles.button2} onPress={cntToggleState}>
           {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
@@ -50,7 +71,7 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   ppl: {
-    alignSelf: 'center',
+    alignSelf: "center",
     top: 5,
     color: 'white',
     fontWeight:'bold',
@@ -62,7 +83,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 30,
     borderRadius: 10,
-    backgroundColor: '#86CF3C'
+    backgroundColor: "#86CF3C",
   },
   button2: {
     left: 280,
@@ -94,7 +115,7 @@ const styles = StyleSheet.create({
     bottom: -28,
   },
   mainArticle: {
-    textAlign: 'left',
+    textAlign: "left",
     fontSize: 18,
   },
   profileLocation: {
@@ -103,7 +124,7 @@ const styles = StyleSheet.create({
   },
   profileTime: {
     fontSize: 13,
-    position: 'absolute',
+    position: "absolute",
     marginTop: 35,
     marginLeft: 71,
   },
@@ -119,33 +140,33 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   separator: {
-    position: 'absolute',
+    position: "absolute",
     marginTop: 68,
     height: 2,
     width: '90%',
     marginLeft:10
   },
   profile: {
-    position: 'relative',
-    alignContent: 'center',
-    width: '100%',
+    position: "relative",
+    alignContent: "center",
+    width: "100%",
     height: 70,
-    display: 'flex',
-    flexDirection: 'row',
-    marginLeft:10
+    display: "flex",
+    flexDirection: "row",
+    marginLeft: 10,
   },
   img: {
-    width: '100%',
+    width: "100%",
     height: 300,
-    alignSelf: 'center',
-    marginVertical:20,
+    alignSelf: "center",
+    marginVertical: 20,
   },
   container: {
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignContent: 'center',
-    width: '100%',
-    height: '100%',
-  }
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+    width: "100%",
+    height: "100%",
+  },
 });
