@@ -3,11 +3,13 @@ import React from "react";
 import { Text, View } from "../components/Themed";
 import { Image } from "react-native";
 
-export default function ItemDetails({ navigation }: any) {
+export default function ItemDetails1({ navigation }: any) {
+
   const [toggle, setToggle] = React.useState(false);
   function toggleState() {
     setToggle(!toggle);
   }
+
   const [cntToggle, setcntToggle] = React.useState(false);
   function cntToggleState() {
     setcntToggle(!cntToggle);
@@ -43,10 +45,7 @@ export default function ItemDetails({ navigation }: any) {
           오늘 저녁으로 먹을 예정이라 1시간 반 동안만 구할게요!
         </Text>
       </View>
-      <TouchableOpacity
-        onPress={toggleState}
-        style={{ zIndex: 10, top: 190, width: 50, height: 50 }}
-      />
+      <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 150, width: 50, height: 50}} />
       <View style={styles.down}>
         {toggle ? (
           <Image
@@ -60,13 +59,11 @@ export default function ItemDetails({ navigation }: any) {
           />
         )}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
-        <TouchableOpacity style={styles.button} onPress={cntToggleState}>
-          {cntToggle ? (
-            <Text style={styles.ppl}>2 / 3</Text>
-          ) : (
-            <Text style={styles.ppl}>1 / 3</Text>
-          )}
-        </TouchableOpacity>
+        {cntToggle ? <TouchableOpacity style={styles.button2} onPress={cntToggleState}>
+          {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
+        </TouchableOpacity> :         <TouchableOpacity style={styles.button} onPress={cntToggleState}>
+          {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
+        </TouchableOpacity>}
       </View>
     </View>
   );
@@ -75,13 +72,16 @@ export default function ItemDetails({ navigation }: any) {
 const styles = StyleSheet.create({
   chatBox: {
     marginLeft: 20,
-    marginRight: 20,
-    marginTop: 10,
+    marginRight: 10,
+    marginTop: 10
   },
   ppl: {
     alignSelf: "center",
     top: 5,
-    color: "white",
+    color: 'white',
+    fontWeight:'bold',
+    fontSize: 16,
+    marginTop:-1
   },
   button: {
     left: 280,
@@ -90,25 +90,34 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "#86CF3C",
   },
+  button2: {
+    left: 280,
+    width: 80,
+    height: 30,
+    borderRadius: 10,
+    backgroundColor: 'grey'
+  },
   together: {
-    position: "absolute",
-    left: 120,
+    position: 'absolute',
+    left: 112,
+    marginTop:2,
+    fontSize:18
   },
   heart: {
     zIndex: 13,
-    width: 25,
-    height: 25,
-    top: 5,
-    left: 5,
-    position: "relative",
+    width: 30,
+    height: 30,
+    top: 2,
+    left: 20,
+    position: 'relative',
   },
   down: {
-    position: "absolute",
-    display: "flex",
-    flexDirection: "row",
-    width: "100%",
-    height: "10%",
-    bottom: -30,
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    height: '10%',
+    bottom: -28,
   },
   mainArticle: {
     textAlign: "left",
@@ -122,7 +131,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     position: "absolute",
     marginTop: 35,
-    marginLeft: 80,
+    marginLeft: 71,
   },
   profileName: {
     fontSize: 20,
@@ -139,8 +148,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 68,
     height: 2,
-    width: "80%",
-    marginLeft: "10%",
+    width: '90%',
+    marginLeft:10
   },
   profile: {
     position: "relative",
