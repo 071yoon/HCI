@@ -113,7 +113,7 @@ function BottomTabNavigator() {
           headerShown: false,
           title: '글 작성',
           tabBarIcon: ({ focused }) => {
-            return(<Image source={require('../assets/images/PlaceVector.png')} />)}
+            return(<Image source={require('../assets/images/PlusVector.png')} />)}
         }}
       />
       <BottomTab.Screen

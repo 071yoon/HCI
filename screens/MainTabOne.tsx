@@ -10,7 +10,6 @@ export default function TabOneScreen({ navigation }: any)  {
         <View style={styles.topNav}>
         <Image style={styles.bar} source={require("../assets/images/threeBar.png")} />
         <Image style={styles.alarm} source={require("../assets/images/Alarm.png")} />
-        <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
         </View>
         <View style={styles.main}>
         <TouchableOpacity style={styles.boxContainer} onPress={() => navigation.navigate('TabOneDetail1')}>
@@ -143,21 +142,23 @@ const styles = StyleSheet.create({
     top: 30,
     flex: 1,
     marginBottom: 30,
+    backgroundColor: 'white',
   },
   topNav: {
+    display: "flex",
+    flexDirection:'row',
+    marginTop:10,
     height: 60,
-    position: 'relative',
-    alignContent: 'center',
+    justifyContent: "space-between",
+    alignContent: "center",
   },
   bar: {
-    position: 'absolute',
     marginLeft: 20,
     marginTop: 15,
   },
   alarm: {
-    position: 'absolute',
-    marginLeft: 340,
     marginTop: 10,
+    marginRight: 20
   },
   separator: {
     marginVertical: 50,

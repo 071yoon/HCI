@@ -27,23 +27,39 @@ export default function SearchScreen({ navigation }: any) {
         <View style={styles.recentBubble}>
         <ScrollView horizontal={true} > 
           <View style={styles.recommendOne}>
-            <ImageBackground source={require("../assets/images/grape.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
-            <Text style={styles.one}>포도</Text>
+            <ImageBackground source={require("../assets/images/grape.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover'>
+            <View style={styles.one}>
+              <Text style={styles.text}>
+                포도
+              </Text>
+            </View>
             </ImageBackground>
           </View>    
           <TouchableOpacity style={styles.recommendOne} onPress={() => navigation.navigate('OnionSearch')}>
-            <ImageBackground source={require("../assets/images/onion.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
-            <Text style={styles.one}>양파</Text>
+            <ImageBackground source={require("../assets/images/onion.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover'>
+            <View style={styles.one}>
+              <Text style={styles.text}>
+                양파
+              </Text>
+            </View>
             </ImageBackground>
           </TouchableOpacity>
           <View style={styles.recommendOne}>
-            <ImageBackground source={require("../assets/images/pepper.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
-            <Text style={styles.one}>고춧가루</Text>
+            <ImageBackground source={require("../assets/images/pepper.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover'>
+            <View style={styles.one}>
+              <Text style={styles.text}>
+                고춧가루
+              </Text>
+            </View>
             </ImageBackground>
           </View>
           <View style={styles.recommendOne}>
-            <ImageBackground source={require("../assets/images/apple.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover' blurRadius={10}>
-            <Text style={styles.one}>사과</Text>
+            <ImageBackground source={require("../assets/images/apple.jpg")} style={{width: "100%", height: "100%"}} imageStyle={{borderRadius: 15}} resizeMode='cover'>
+            <View style={styles.one}>
+              <Text style={styles.text}>
+                사과
+              </Text>
+            </View>
             </ImageBackground>
           </View>
         </ScrollView>
@@ -67,6 +83,12 @@ export default function SearchScreen({ navigation }: any) {
 }
 
 const styles = StyleSheet.create({
+  text: {
+    color: 'white',
+    alignSelf: 'center',
+    top: 35,
+    fontSize: 20,
+  },
   submit: {
     position: 'absolute',
     top: 16,
@@ -80,17 +102,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   one: {
-    fontSize: 16,
-    color: 'white',
-    top: 35,
     borderRadius: 10,
-    padding: 2,
-    marginLeft: 30,
-    marginRight: 10,
-    width: 74,
-    height: 30,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    textAlign: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
   recommendOne: {
     marginLeft: 5,
@@ -98,7 +113,6 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 15,
     width: 150,
-    backgroundColor: 'rgba(0,0,0,0.3)',
   },
   bubble: {
     borderRadius: 30,
