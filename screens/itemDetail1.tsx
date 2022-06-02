@@ -4,21 +4,29 @@ import { Text, View } from "../components/Themed";
 import { Image } from "react-native";
 
 export default function ItemDetails1({ navigation }: any) {
-
   const [toggle, setToggle] = React.useState(false);
   function toggleState() {
     setToggle(!toggle);
   }
-
+  const [showText, setShowText] = React.useState(true);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setShowText((showText) => !showText);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   const [cntToggle, setcntToggle] = React.useState(false);
   function cntToggleState() {
     setcntToggle(!cntToggle);
   }
   return (
-
     <View style={styles.container}>
-      <View style={styles.blink}>
-        <Text>1명 남았습니다.</Text>
+      <View>
+        <Text
+          style={[styles.textStyle, { display: showText ? "none" : "flex" }]}
+        >
+          1명 남았습니다!{" "}
+        </Text>
       </View>
       <Image
         style={styles.img}
@@ -49,7 +57,10 @@ export default function ItemDetails1({ navigation }: any) {
           오늘 저녁으로 먹을 예정이라 1시간 반 동안만 구할게요!
         </Text>
       </View>
-      <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 150, width: 50, height: 50}} />
+      <TouchableOpacity
+        onPress={toggleState}
+        style={{ zIndex: 10, top: 150, width: 50, height: 50 }}
+      />
       <View style={styles.down}>
         {toggle ? (
           <Image
@@ -63,29 +74,47 @@ export default function ItemDetails1({ navigation }: any) {
           />
         )}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
-        {cntToggle ? <TouchableOpacity style={styles.button2} onPress={cntToggleState}>
-          {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
-        </TouchableOpacity> :         <TouchableOpacity style={styles.button} onPress={cntToggleState}>
-          {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
-        </TouchableOpacity>}
+        {cntToggle ? (
+          <TouchableOpacity style={styles.button2} onPress={cntToggleState}>
+            {cntToggle ? (
+              <Text style={styles.ppl}>참여완료</Text>
+            ) : (
+              <Text style={styles.ppl}>참여하기</Text>
+            )}
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity style={styles.button} onPress={cntToggleState}>
+            {cntToggle ? (
+              <Text style={styles.ppl}>참여완료</Text>
+            ) : (
+              <Text style={styles.ppl}>참여하기</Text>
+            )}
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  textStyle: {
+    fontSize: 22,
+    color: "red",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
   chatBox: {
     marginLeft: 20,
     marginRight: 10,
-    marginTop: 10
+    marginTop: 10,
   },
   ppl: {
     alignSelf: "center",
     top: 5,
-    color: 'white',
-    fontWeight:'bold',
+    color: "white",
+    fontWeight: "bold",
     fontSize: 16,
-    marginTop:-1
+    marginTop: -1,
   },
   button: {
     left: 280,
@@ -99,13 +128,13 @@ const styles = StyleSheet.create({
     width: 80,
     height: 30,
     borderRadius: 10,
-    backgroundColor: 'grey'
+    backgroundColor: "grey",
   },
   together: {
-    position: 'absolute',
+    position: "absolute",
     left: 112,
-    marginTop:2,
-    fontSize:18
+    marginTop: 2,
+    fontSize: 18,
   },
   heart: {
     zIndex: 13,
@@ -113,14 +142,14 @@ const styles = StyleSheet.create({
     height: 30,
     top: 2,
     left: 20,
-    position: 'relative',
+    position: "relative",
   },
   down: {
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    height: '10%',
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    height: "10%",
     bottom: -28,
   },
   mainArticle: {
@@ -152,8 +181,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 68,
     height: 2,
-    width: '90%',
-    marginLeft:10
+    width: "90%",
+    marginLeft: 10,
   },
   profile: {
     position: "relative",
