@@ -2,6 +2,7 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Text, View } from "../components/Themed";
 import { Image } from "react-native";
+import { Alert } from "react-native";
 
 export default function ItemDetails1({ navigation }: any) {
   const [toggle, setToggle] = React.useState(false);
@@ -17,7 +18,41 @@ export default function ItemDetails1({ navigation }: any) {
   }, []);
   const [cntToggle, setcntToggle] = React.useState(false);
   function cntToggleState() {
-    setcntToggle(!cntToggle);
+    if (!cntToggle) {
+      return Alert.alert(
+        "같이 구매하시겠어요?",
+        "예를 누르시면 참여가 확정됩니다",
+        [
+          // The "Yes" button
+          {
+            text: "예",
+            onPress: () => {
+              setcntToggle(!cntToggle);
+            },
+          },
+          // The "No" button
+          // Does nothing but dismiss the dialog when tapped
+          {
+            text: "아니요",
+          },
+        ]
+      );
+    } else {
+      return Alert.alert("취소하시겠어요?", "예를 누르시면 참여가 취소됩니다", [
+        // The "Yes" button
+        {
+          text: "예",
+          onPress: () => {
+            setcntToggle(!cntToggle);
+          },
+        },
+        // The "No" button
+        // Does nothing but dismiss the dialog when tapped
+        {
+          text: "아니요",
+        },
+      ]);
+    }
   }
   return (
     <View style={styles.container}>

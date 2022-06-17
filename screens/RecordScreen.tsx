@@ -31,12 +31,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     top: 5,
     left: 50,
+    fontWeight : 'bold'
   },
   textsR: {
     position: "absolute",
     fontSize: 18,
     top: 5,
     right: 50,
+    fontWeight : 'bold'
   },
   button: {
     borderColor: "#97bc62",
