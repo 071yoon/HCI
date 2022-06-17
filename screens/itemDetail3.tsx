@@ -2,6 +2,7 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Text, View } from "../components/Themed";
 import { Image } from "react-native";
+import { Alert } from "react-native";
 
 export default function ItemDetails({ navigation }: any) {
   const [toggle, setToggle] = React.useState(false);
@@ -10,20 +11,50 @@ export default function ItemDetails({ navigation }: any) {
   }
   const [cntToggle, setcntToggle] = React.useState(false);
   function cntToggleState() {
-    setcntToggle(!cntToggle);
+    if (!cntToggle) {
+      return Alert.alert(
+        "같이 구매하시겠어요?",
+        "예를 누르시면 참여가 확정됩니다",
+        [
+          // The "Yes" button
+          {
+            text: "예",
+            onPress: () => {
+              setcntToggle(!cntToggle);
+            },
+          },
+          // The "No" button
+          // Does nothing but dismiss the dialog when tapped
+          {
+            text: "아니요",
+          },
+        ]
+      );
+    } else {
+      return Alert.alert("취소하시겠어요?", "예를 누르시면 참여가 취소됩니다", [
+        // The "Yes" button
+        {
+          text: "예",
+          onPress: () => {
+            setcntToggle(!cntToggle);
+          },
+        },
+        // The "No" button
+        // Does nothing but dismiss the dialog when tapped
+        {
+          text: "아니요",
+        },
+      ]);
+    }
   }
   return (
     <View style={styles.container}>
-      <View style = {{height:30, marginTop:20}}>
-        {
-          cntToggle?
-          <Text style={styles.num}>
-          1명 남았습니다.
-      </Text> :
-              <Text style={styles.num}>
-              2명 남았습니다.
-          </Text>
-        }
+      <View style={{ height: 30, marginTop: 20 }}>
+        {cntToggle ? (
+          <Text style={styles.num}>1명 남았습니다.</Text>
+        ) : (
+          <Text style={styles.num}>2명 남았습니다.</Text>
+        )}
       </View>
       <Image
         style={styles.img}
@@ -52,7 +83,10 @@ export default function ItemDetails({ navigation }: any) {
         </Text>
         <Text style={styles.mainArticle}>3명정도 모집합니다!</Text>
       </View>
-      <TouchableOpacity onPress={toggleState} style={{zIndex: 10, top: 150, width: 50, height: 50}} />
+      <TouchableOpacity
+        onPress={toggleState}
+        style={{ zIndex: 10, top: 150, width: 50, height: 50 }}
+      />
       <View style={styles.down}>
         {toggle ? (
           <Image
@@ -66,11 +100,23 @@ export default function ItemDetails({ navigation }: any) {
           />
         )}
         <Text style={styles.together}>같이 구매하시겠어요?</Text>
-        {cntToggle ? <TouchableOpacity style={styles.button2} onPress={cntToggleState}>
-          {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
-        </TouchableOpacity> :         <TouchableOpacity style={styles.button} onPress={cntToggleState}>
-          {cntToggle ? <Text style={styles.ppl}>참여완료</Text> : <Text style={styles.ppl}>참여하기</Text>}
-        </TouchableOpacity>}
+        {cntToggle ? (
+          <TouchableOpacity style={styles.button2} onPress={cntToggleState}>
+            {cntToggle ? (
+              <Text style={styles.ppl}>참여완료</Text>
+            ) : (
+              <Text style={styles.ppl}>참여하기</Text>
+            )}
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity style={styles.button} onPress={cntToggleState}>
+            {cntToggle ? (
+              <Text style={styles.ppl}>참여완료</Text>
+            ) : (
+              <Text style={styles.ppl}>참여하기</Text>
+            )}
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
@@ -86,15 +132,15 @@ const styles = StyleSheet.create({
   chatBox: {
     marginLeft: 20,
     marginRight: 10,
-    marginTop: 10
+    marginTop: 10,
   },
   ppl: {
     alignSelf: "center",
     top: 5,
-    color: 'white',
-    fontWeight:'bold',
+    color: "white",
+    fontWeight: "bold",
     fontSize: 16,
-    marginTop:-1
+    marginTop: -1,
   },
   button: {
     left: 280,
@@ -108,13 +154,13 @@ const styles = StyleSheet.create({
     width: 80,
     height: 30,
     borderRadius: 10,
-    backgroundColor: 'grey'
+    backgroundColor: "grey",
   },
   together: {
-    position: 'absolute',
+    position: "absolute",
     left: 112,
-    marginTop:2,
-    fontSize:18
+    marginTop: 2,
+    fontSize: 18,
   },
   heart: {
     zIndex: 13,
@@ -122,14 +168,14 @@ const styles = StyleSheet.create({
     height: 30,
     top: 2,
     left: 20,
-    position: 'relative',
+    position: "relative",
   },
   down: {
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    height: '10%',
+    position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    height: "10%",
     bottom: -28,
   },
   mainArticle: {
@@ -161,8 +207,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     marginTop: 68,
     height: 2,
-    width: '90%',
-    marginLeft:10
+    width: "90%",
+    marginLeft: 10,
   },
   profile: {
     position: "relative",
