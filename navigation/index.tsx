@@ -154,7 +154,7 @@ function BottomTabNavigator() {
           headerShown: false,
           tabBarIcon: ({ focused }) => {
             return (
-              <Image source={require("../assets/images/HomeVector.png")} />
+              <Image source={require("../assets/images/HomeVector.png")} style={{width:40, height:40, marginBottom:8}}/>
             );
           },
         })}
@@ -166,7 +166,7 @@ function BottomTabNavigator() {
           title: "검색",
           tabBarIcon: ({ focused }) => {
             return (
-              <Image source={require("../assets/images/SearchVector.png")} />
+              <Image source={require("../assets/images/SearchVector.png")} style={{width:44, height:44}}/>
             );
           },
         }}
@@ -179,7 +179,7 @@ function BottomTabNavigator() {
           title: "글 작성",
           tabBarIcon: ({ focused }) => {
             return (
-              <Image source={require("../assets/images/PlusVector.png")} />
+              <Image source={require("../assets/images/PlusVector.png")} style={{width:32, height:32, marginBottom:2}}/>
             );
           },
         }}
@@ -191,7 +191,7 @@ function BottomTabNavigator() {
           title: "기록",
           tabBarIcon: ({ focused }) => {
             return (
-              <Image source={require("../assets/images/RecordVector.png")} />
+              <Image source={require("../assets/images/RecordVector.png")} style={{width:40, height:40}}/>
             );
           },
         })}
@@ -204,7 +204,7 @@ function BottomTabNavigator() {
           title: "내 정보",
           tabBarIcon: ({ focused }) => {
             return (
-              <Image source={require("../assets/images/ProfileVector.png")} />
+              <Image source={require("../assets/images/ProfileVector.png")} style={{width:42, height:42}}/>
             );
           },
         }}

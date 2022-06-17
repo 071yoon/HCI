@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 30,
     borderRadius: 10,
-    backgroundColor: "#92DF45",
+    backgroundColor: "#97bc62",
   },
   issueText: {
     marginTop: 10,
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 30,
     fontSize: 15,
-    backgroundColor: "#92DF45",
+    backgroundColor: "#97bc62",
     textAlign: "center",
   },
   recentBubble: {

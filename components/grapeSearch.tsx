@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   count: {
-    backgroundColor: "#86cf3c",
+    backgroundColor: "#97bc62",
     width: 150,
     height: 35,
     marginTop: 0,

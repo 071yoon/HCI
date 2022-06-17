@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     color: "rgb(244,104,0)",
   },
   fontGreen: {
-    color: "#86CF3C",
+    color: "#97bc62",
   },
   middleFont: {
     fontSize: 14,
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   count: {
-    backgroundColor: "#86cf3c",
+    backgroundColor: "#97bc62",
     width: 150,
     height: 35,
     marginTop: 0,

@@ -46,7 +46,10 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail2")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 1</Text>
+            <Text style={styles.countText}>남은 인원 :</Text>
+            <Text style={styles.countNum}>
+              1
+              </Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -66,7 +69,10 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail3")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 2</Text>
+            <Text style={styles.countText}>남은 인원 :</Text>
+            <Text style={styles.countNum}>
+              2
+              </Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -86,7 +92,10 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail4")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 2</Text>
+            <Text style={styles.countText}>남은 인원 :</Text>
+            <Text style={styles.countNum}>
+              2
+              </Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -106,7 +115,10 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail5")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 2</Text>
+            <Text style={styles.countText}>남은 인원 :</Text>
+            <Text style={styles.countNum}>
+              2
+              </Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -126,7 +138,10 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail6")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 3</Text>
+            <Text style={styles.countText}>남은 인원 :</Text>
+            <Text style={styles.countNum}>
+              3
+              </Text>
           </View>
           <Image
             style={styles.boxImage}

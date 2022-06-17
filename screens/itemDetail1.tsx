@@ -2,7 +2,6 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Text, View } from "../components/Themed";
 import { Image } from "react-native";
-import { Alert } from "react-native";
 
 export default function ItemDetails1({ navigation }: any) {
   const [toggle, setToggle] = React.useState(false);
@@ -18,54 +17,23 @@ export default function ItemDetails1({ navigation }: any) {
   }, []);
   const [cntToggle, setcntToggle] = React.useState(false);
   function cntToggleState() {
-    if (!cntToggle) {
-      return Alert.alert(
-        "같이 구매하시겠어요?",
-        "예를 누르시면 참여가 확정됩니다",
-        [
-          // The "Yes" button
-          {
-            text: "예",
-            onPress: () => {
-              setcntToggle(!cntToggle);
-            },
-          },
-          // The "No" button
-          // Does nothing but dismiss the dialog when tapped
-          {
-            text: "아니요",
-          },
-        ]
-      );
-    } else {
-      return Alert.alert("취소하시겠어요?", "예를 누르시면 참여가 취소됩니다", [
-        // The "Yes" button
-        {
-          text: "예",
-          onPress: () => {
-            setcntToggle(!cntToggle);
-          },
-        },
-        // The "No" button
-        // Does nothing but dismiss the dialog when tapped
-        {
-          text: "아니요",
-        },
-      ]);
-    }
+    setcntToggle(!cntToggle);
   }
   return (
     <View style={styles.container}>
-      <View style={{ height: 30, marginTop: 20 }}>
-        {cntToggle ? (
-          <Text style={styles.magam}>마감되었습니다.</Text>
-        ) : (
+      <View style = {{height:30, marginTop:20}}>
+        {
+          cntToggle?
+          <Text style={styles.magam}>
+            마감되었습니다.
+          </Text> :
           <Text
-            style={[styles.textStyle, { display: showText ? "none" : "flex" }]}
-          >
-            마감 임박!{" "}
-          </Text>
-        )}
+          style={[styles.textStyle, { display: showText ? "none" : "flex" }]}
+        >
+          마감 임박!{" "}
+        </Text>  
+        }
+        
       </View>
       <Image
         style={styles.img}
@@ -166,7 +134,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 30,
     borderRadius: 10,
-    backgroundColor: "#86CF3C",
+    backgroundColor: "#97bc62",
   },
   button2: {
     left: 280,

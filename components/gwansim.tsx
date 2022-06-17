@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     left: 250,
     width: 60,
     height: 30,
-    backgroundColor: "#86CF3C",
+    backgroundColor: "#97bc62",
     borderRadius: 13,
   },
   message: {

@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   chatBoxMe: {
-    backgroundColor: "#86cf3c",
+    backgroundColor: "#97bc62",
     paddingVertical: 8,
     paddingHorizontal: 10,
     borderRadius: 10,

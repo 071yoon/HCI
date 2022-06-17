@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     right: 50,
   },
   button: {
-    borderColor: "#86CF3C",
+    borderColor: "#97bc62",
     borderWidth: 2,
     position: "absolute",
     top: 30,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     width: "50%",
     height: 40,
     overflow: "hidden",
-    backgroundColor: "#86CF3C",
+    backgroundColor: "#97bc62",
   },
   toggledButton: {
     position: "absolute",
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     right: 0,
     height: 40,
     overflow: "hidden",
-    backgroundColor: "#86CF3C",
+    backgroundColor: "#97bc62",
   },
   container: {
     flex: 1,
