@@ -76,12 +76,12 @@ function RootNavigator() {
       <Stack.Screen
         name="OnionSearch"
         component={OnionSearch}
-        options={{ title: "Onion" }}
+        options={{ title: "양파" }}
       />
       <Stack.Screen
         name="GrapeSearch"
         component={GrapeSearch}
-        options={{ title: "Grape" }}
+        options={{ title: "포도" }}
       />
       <Stack.Screen
         name="BlankSearch"

@@ -20,7 +20,7 @@ export default function daewha() {
             source={require("../assets/images/onionProfile.png")}
           />
           <Text style={styles.title}>양파좋아</Text>
-          <Text style={styles.message}>그럼 거기서 만나요!</Text>
+          <Text style={styles.message}>전 건대입구역이에요!</Text>
           <View style={styles.separator} />
         </TouchableOpacity>
         <View style={styles.profile}>

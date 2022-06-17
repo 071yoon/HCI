@@ -10,7 +10,7 @@ export default function LoginScreen({ navigation }: any) {
         <TextInput placeholder="ID" style={styles.id}></TextInput>
       </View>
       <View style={styles.inputs}>
-        <Text style={{ top: 10 }}>{"Password   "}</Text>
+        <Text style={{ top: 10 }}>{"Password  "}</Text>
         <TextInput
           style={styles.id}
           secureTextEntry={true}

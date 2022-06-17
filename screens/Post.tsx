@@ -59,7 +59,7 @@ export default function ProfileScreen() {
       <View style={styles.location}>
         <Text style={{ fontSize: 20, height: 40, marginLeft: 20 }}>게시</Text>
         <View style={styles.essentialLocate}>
-          <Text style={{ color: "red" }}>* </Text>
+          <Text style={{ color: "red",marginTop:-5 }}>* </Text>
           <TextInput
             style={styles.locate}
             placeholder={"  위치를 입력하세요"}
@@ -70,7 +70,7 @@ export default function ProfileScreen() {
       </View>
       <View style={styles.items}>
         <View style={styles.essentialName}>
-          <Text style={{ color: "red" }}>* </Text>
+          <Text style={{ color: "red", marginLeft:6, marginTop:6}}>* </Text>
           <TextInput
             style={styles.nameInput}
             placeholder={"상품명"}
@@ -79,7 +79,7 @@ export default function ProfileScreen() {
           />
         </View>
         <View style={styles.essentialPeople}>
-          <Text style={{ color: "red" }}>* </Text>
+          <Text style={{ color: "red", marginLeft:22, marginRight:-12, marginTop:6 }}>* </Text>
           <TextInput
             style={styles.cntInput}
             placeholder={"모집 인원"}
@@ -88,7 +88,7 @@ export default function ProfileScreen() {
           />
         </View>
         <View style={styles.essentialTitle}>
-          <Text style={{ color: "red" }}>* </Text>
+          <Text style={{ color: "red", marginLeft:6, marginTop:6, marginRight:-13 }}>* </Text>
           <TextInput
             style={styles.title}
             placeholder={"제목"}
@@ -149,6 +149,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 5,
     alignSelf: "center",
+    color:'white',
   },
   submit: {
     position: "absolute",
@@ -159,13 +160,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#92DF45",
     right: 10,
     bottom: 10,
+    marginRight:20,
   },
   info: {
     position: "absolute",
-    left: 20,
+    left: 13,
     top: 110,
     height: 250,
-    width: 340,
+    width: 357,
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
   title: {
     position: "relative",
     height: 40,
-    width: 340,
+    width: 357,
     margin: 12,
     borderRadius: 10,
     borderWidth: 1,
@@ -185,7 +187,7 @@ const styles = StyleSheet.create({
     top: 0,
     height: 40,
     width: 200,
-    margin: 12,
+    marginVertical: 12,
     borderRadius: 10,
     borderWidth: 1,
     padding: 10,

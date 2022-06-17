@@ -23,7 +23,10 @@ export default function TabOneScreen({ navigation }: any) {
           onPress={() => navigation.navigate("TabOneDetail1")}
         >
           <View style={styles.count}>
-            <Text style={styles.countText}>남은 인원 : 1</Text>
+            <Text style={styles.countText}>남은 인원 :</Text>
+              <Text style={styles.countNum}>
+              1
+              </Text>
           </View>
           <Image
             style={styles.boxImage}
@@ -54,7 +57,7 @@ export default function TabOneScreen({ navigation }: any) {
             lightColor="#eee"
             darkColor="rgba(255,255,255,0.1)"
           />
-          <Text style={styles.mainText}>[엽떡] 같이 먹을 분 찾음</Text>
+          <Text style={styles.mainText}>[엽떡] 같이 먹을 분</Text>
           <Text style={styles.subText}>모집 인원 : 2</Text>
         </TouchableOpacity>
 
@@ -94,7 +97,7 @@ export default function TabOneScreen({ navigation }: any) {
             lightColor="#eee"
             darkColor="rgba(255,255,255,0.1)"
           />
-          <Text style={styles.mainText}>[사과] 같이 구매하실 분</Text>
+          <Text style={styles.mainText}>[사과] 구매하실 분</Text>
           <Text style={styles.subText}>모집 인원 : 3</Text>
         </TouchableOpacity>
 
@@ -145,12 +148,13 @@ export default function TabOneScreen({ navigation }: any) {
 const styles = StyleSheet.create({
   mainText: {
     fontWeight: "bold",
+    fontSize:16
   },
   subText: {
-    fontSize: 12,
+    fontSize: 14,
     position: "absolute",
     color: "gray",
-    marginTop: 175,
+    marginTop: 174,
   },
   boxSeparator: {
     marginVertical: 7,
@@ -167,6 +171,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     fontSize: 17,
+    marginBottom: 6,
+    marginLeft: 30,
+  },
+  countNum: {
+    fontSize: 24,
+    fontWeight:'bold',
+    color:'#2c5f2d',
+    paddingHorizontal: 4,
+    marginBottom:4
   },
   boxContainer: {
     // outline: none;
@@ -180,7 +193,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 200,
     backgroundColor: "white",
-    borderRadius: 30,
+    borderRadius: 20,
     overflow: "hidden",
     borderStyle: "solid",
     borderWidth: 1,
@@ -189,7 +202,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   count: {
-    backgroundColor: "#86cf3c",
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: "#97bc62",
     width: 150,
     height: 35,
     marginTop: 0,

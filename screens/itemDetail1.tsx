@@ -66,7 +66,7 @@ export default function ItemDetails1({ navigation }: any) {
       </View>
       <TouchableOpacity
         onPress={toggleState}
-        style={{ zIndex: 10, top: 150, width: 50, height: 50 }}
+        style={{ zIndex: 10, top: 190, width: 50, height: 50}}
       />
       <View style={styles.down}>
         {toggle ? (
